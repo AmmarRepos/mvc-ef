@@ -6,27 +6,25 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using mvc_ef.Models;
-using System.Text.Encodings.Web;
 
 namespace mvc_ef.Controllers
 {
-    public class PersonController : Controller
+    public class CountryController : Controller
     {
         private readonly SqliteContext _context;
 
-        public PersonController(SqliteContext context)
+        public CountryController(SqliteContext context)
         {
             _context = context;
         }
 
-        // GET: Person
+        // GET: Country
         public async Task<IActionResult> Index()
         {
-            var sqliteContext = _context.Person.Include(p => p.City);
-            return View(await sqliteContext.ToListAsync());
+            return View(await _context.Country.ToListAsync());
         }
 
-        // GET: Person/Details/5
+        // GET: Country/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -34,42 +32,39 @@ namespace mvc_ef.Controllers
                 return NotFound();
             }
 
-            var person = await _context.Person
-                .Include(p => p.City)
-                .FirstOrDefaultAsync(m => m.PersonId == id);
-            if (person == null)
+            var country = await _context.Country
+                .FirstOrDefaultAsync(m => m.CountryId == id);
+            if (country == null)
             {
                 return NotFound();
             }
 
-            return View(person);
+            return View(country);
         }
 
-        // GET: Person/Create
+        // GET: Country/Create
         public IActionResult Create()
         {
-            ViewData["CityId"] = new SelectList(_context.Set<City>(), "CityId", "CityId");
             return View();
         }
 
-        // POST: Person/Create
+        // POST: Country/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PersonId,Name,CityId")] Person person)
+        public async Task<IActionResult> Create([Bind("CountryId,Name")] Country country)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(person);
+                _context.Add(country);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CityId"] = new SelectList(_context.Set<City>(), "CityId", "CityId", person.CityId);
-	    return View(person);
+            return View(country);
         }
 
-        // GET: Person/Edit/5
+        // GET: Country/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -77,23 +72,22 @@ namespace mvc_ef.Controllers
                 return NotFound();
             }
 
-            var person = await _context.Person.FindAsync(id);
-            if (person == null)
+            var country = await _context.Country.FindAsync(id);
+            if (country == null)
             {
                 return NotFound();
             }
-            ViewData["CityId"] = new SelectList(_context.Set<City>(), "CityId", "CityId", person.CityId);
-            return View(person);
+            return View(country);
         }
 
-        // POST: Person/Edit/5
+        // POST: Country/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("PersonId,Name,CityId")] Person person)
+        public async Task<IActionResult> Edit(int id, [Bind("CountryId,Name")] Country country)
         {
-            if (id != person.PersonId)
+            if (id != country.CountryId)
             {
                 return NotFound();
             }
@@ -102,12 +96,12 @@ namespace mvc_ef.Controllers
             {
                 try
                 {
-                    _context.Update(person);
+                    _context.Update(country);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!PersonExists(person.PersonId))
+                    if (!CountryExists(country.CountryId))
                     {
                         return NotFound();
                     }
@@ -118,11 +112,10 @@ namespace mvc_ef.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CityId"] = new SelectList(_context.Set<City>(), "CityId", "CityId", person.CityId);
-            return View(person);
+            return View(country);
         }
 
-        // GET: Person/Delete/5
+        // GET: Country/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -130,31 +123,30 @@ namespace mvc_ef.Controllers
                 return NotFound();
             }
 
-            var person = await _context.Person
-                .Include(p => p.City)
-                .FirstOrDefaultAsync(m => m.PersonId == id);
-            if (person == null)
+            var country = await _context.Country
+                .FirstOrDefaultAsync(m => m.CountryId == id);
+            if (country == null)
             {
                 return NotFound();
             }
 
-            return View(person);
+            return View(country);
         }
 
-        // POST: Person/Delete/5
+        // POST: Country/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var person = await _context.Person.FindAsync(id);
-            _context.Person.Remove(person);
+            var country = await _context.Country.FindAsync(id);
+            _context.Country.Remove(country);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool PersonExists(int id)
+        private bool CountryExists(int id)
         {
-            return _context.Person.Any(e => e.PersonId == id);
+            return _context.Country.Any(e => e.CountryId == id);
         }
     }
 }

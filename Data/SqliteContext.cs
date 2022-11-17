@@ -13,4 +13,10 @@ using mvc_ef.Models;
         }
 
         public DbSet<mvc_ef.Models.Person> Person { get; set; }
+
+        public DbSet<mvc_ef.Models.City> City { get; set; }
+
+        public DbSet<mvc_ef.Models.Country> Country { get; set; }
+
+        public DbSet<mvc_ef.Models.Language> Language { get; set; }
     }

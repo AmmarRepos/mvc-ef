@@ -1,0 +1,48 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using System;
+using System.Linq;
+
+namespace mvc_ef.Models
+{
+    public static class SeedPeople
+    {
+        public static void Initialize(IServiceProvider serviceProvider)
+        {
+            using (var context = new SqliteContext(
+                serviceProvider.GetRequiredService<
+                    DbContextOptions<SqliteContext>>()))
+            {
+                // Look for any movies.
+                if (context.Person.Any())
+                {
+                    return;   // DB has been seeded
+                }
+
+                context.Person.AddRange(
+                    new Person
+                    {
+                        PersonId = 1,
+			Name = "P1",
+			CityId = 1;
+                    },
+
+		    new Person
+                    {
+                        PersonId = 2,
+			Name = "P2",
+			CityId = 1;
+                    },
+
+		    new Person
+                    {
+                        PersonId = 3,
+			Name = "P3",
+			CityId = 1;
+                    }
+                );
+                context.SaveChanges();
+            }
+        }
+    }
+}

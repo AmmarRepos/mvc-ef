@@ -6,27 +6,25 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using mvc_ef.Models;
-using System.Text.Encodings.Web;
 
 namespace mvc_ef.Controllers
 {
-    public class PersonController : Controller
+    public class LanguageController : Controller
     {
         private readonly SqliteContext _context;
 
-        public PersonController(SqliteContext context)
+        public LanguageController(SqliteContext context)
         {
             _context = context;
         }
 
-        // GET: Person
+        // GET: Language
         public async Task<IActionResult> Index()
         {
-            var sqliteContext = _context.Person.Include(p => p.City);
-            return View(await sqliteContext.ToListAsync());
+            return View(await _context.Language.ToListAsync());
         }
 
-        // GET: Person/Details/5
+        // GET: Language/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -34,42 +32,39 @@ namespace mvc_ef.Controllers
                 return NotFound();
             }
 
-            var person = await _context.Person
-                .Include(p => p.City)
-                .FirstOrDefaultAsync(m => m.PersonId == id);
-            if (person == null)
+            var language = await _context.Language
+                .FirstOrDefaultAsync(m => m.LanguageId == id);
+            if (language == null)
             {
                 return NotFound();
             }
 
-            return View(person);
+            return View(language);
         }
 
-        // GET: Person/Create
+        // GET: Language/Create
         public IActionResult Create()
         {
-            ViewData["CityId"] = new SelectList(_context.Set<City>(), "CityId", "CityId");
             return View();
         }
 
-        // POST: Person/Create
+        // POST: Language/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PersonId,Name,CityId")] Person person)
+        public async Task<IActionResult> Create([Bind("LanguageId,Name")] Language language)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(person);
+                _context.Add(language);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CityId"] = new SelectList(_context.Set<City>(), "CityId", "CityId", person.CityId);
-	    return View(person);
+            return View(language);
         }
 
-        // GET: Person/Edit/5
+        // GET: Language/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -77,23 +72,22 @@ namespace mvc_ef.Controllers
                 return NotFound();
             }
 
-            var person = await _context.Person.FindAsync(id);
-            if (person == null)
+            var language = await _context.Language.FindAsync(id);
+            if (language == null)
             {
                 return NotFound();
             }
-            ViewData["CityId"] = new SelectList(_context.Set<City>(), "CityId", "CityId", person.CityId);
-            return View(person);
+            return View(language);
         }
 
-        // POST: Person/Edit/5
+        // POST: Language/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("PersonId,Name,CityId")] Person person)
+        public async Task<IActionResult> Edit(int id, [Bind("LanguageId,Name")] Language language)
         {
-            if (id != person.PersonId)
+            if (id != language.LanguageId)
             {
                 return NotFound();
             }
@@ -102,12 +96,12 @@ namespace mvc_ef.Controllers
             {
                 try
                 {
-                    _context.Update(person);
+                    _context.Update(language);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!PersonExists(person.PersonId))
+                    if (!LanguageExists(language.LanguageId))
                     {
                         return NotFound();
                     }
@@ -118,11 +112,10 @@ namespace mvc_ef.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CityId"] = new SelectList(_context.Set<City>(), "CityId", "CityId", person.CityId);
-            return View(person);
+            return View(language);
         }
 
-        // GET: Person/Delete/5
+        // GET: Language/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -130,31 +123,30 @@ namespace mvc_ef.Controllers
                 return NotFound();
             }
 
-            var person = await _context.Person
-                .Include(p => p.City)
-                .FirstOrDefaultAsync(m => m.PersonId == id);
-            if (person == null)
+            var language = await _context.Language
+                .FirstOrDefaultAsync(m => m.LanguageId == id);
+            if (language == null)
             {
                 return NotFound();
             }
 
-            return View(person);
+            return View(language);
         }
 
-        // POST: Person/Delete/5
+        // POST: Language/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var person = await _context.Person.FindAsync(id);
-            _context.Person.Remove(person);
+            var language = await _context.Language.FindAsync(id);
+            _context.Language.Remove(language);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool PersonExists(int id)
+        private bool LanguageExists(int id)
         {
-            return _context.Person.Any(e => e.PersonId == id);
+            return _context.Language.Any(e => e.LanguageId == id);
         }
     }
 }
