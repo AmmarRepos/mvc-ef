@@ -6,6 +6,7 @@ namespace mvc_ef.Models
     {
 	[Key]
         public int CityId { get; set; }
+	[Display(Name = "City Name")]
         public string Name { get; set; }
 
 	// One-to-Many (City - Country)

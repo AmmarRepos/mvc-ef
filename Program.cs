@@ -8,7 +8,8 @@ builder.Services.AddDbContext<SqliteContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("SqliteContext")));
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+// builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews(options => options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true);
 
 var app = builder.Build();
 

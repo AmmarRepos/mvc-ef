@@ -59,6 +59,10 @@ namespace mvc_ef.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("PersonId,Name,CityId")] Person person)
         {
+	    
+	    Random rnd = new Random();
+	    int num = rnd.Next();
+	    person.PersonId = num;
             if (ModelState.IsValid)
             {
                 _context.Add(person);
@@ -97,7 +101,8 @@ namespace mvc_ef.Controllers
             {
                 return NotFound();
             }
-
+	    //            ModelState.Remove("City");
+	    //            ModelState.Remove("Languages");
             if (ModelState.IsValid)
             {
                 try

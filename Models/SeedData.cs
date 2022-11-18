@@ -22,20 +22,78 @@ namespace mvc_ef.Models
                 context.Country.AddRange(
                     new Country
                     {
-                        CountryId = 3,
-			Name = "P1",
+                        CountryId = 1,
+			Name = "Country1",
                     },
 
 		    new Country
                     {
-			CountryId = 4,
-			Name = "P2",
+			CountryId = 2,
+			Name = "Country2",
                     },
 
 		    new Country
                     {
-			CountryId = 5,
-			Name = "P3",
+			CountryId = 3,
+			Name = "Country3",
+                    }
+                );
+
+		context.City.AddRange(
+                    new City
+                    {
+                        CityId = 1,
+			Name = "CityA",
+			CountryId = 1,
+                    },
+		    new City
+		    {
+                        CityId = 2,
+			Name = "CityB",
+			CountryId = 1,
+                    },
+		    new City
+		    {
+                        CityId = 3,
+			Name = "CityC",
+			CountryId = 2,
+                    }
+                );
+		context.Person.AddRange(
+                    new Person
+                    {
+                        PersonId = 1,
+			Name = "PersonA",
+			CityId = 1,
+                    },
+		    new Person
+		    {
+                        PersonId = 2,
+			Name = "PersonB",
+			CityId = 1,
+                    },
+		    new Person
+		    {
+                        PersonId = 3,
+			Name = "PersonC",
+			CityId = 2,
+                    }
+                );
+		context.Language.AddRange(
+                    new Language
+                    {
+                        LanguageId = 1,
+			Name = "LanguageA",
+		    },
+		    new Language
+		    {
+                        LanguageId = 2,
+			Name = "LanguageB",
+                    },
+		    new Language
+		    {
+                        LanguageId = 3,
+			Name = "LangaugeC",
                     }
                 );
                 context.SaveChanges();

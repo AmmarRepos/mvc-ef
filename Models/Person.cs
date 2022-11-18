@@ -14,7 +14,7 @@ namespace mvc_ef.Models
 
 
 	// Many-to-Many (Language - Person)
-	public virtual ICollection<Language> Languages { get; set; }
+	public virtual ICollection<Language>? Languages { get; set; }
 
 	// [Display(Name = "Birth Date")]
         // [DataType(DataType.Date)]
