@@ -97,6 +97,22 @@ namespace mvc_ef.Models
                     }
                 );
                 context.SaveChanges();
+		// protected override void OnModelCreating(ModelBuilder modelBuilder)
+		// {
+		//     modelBuilder.Entity<Person>().HasData(
+		// 	new Person
+		// 	{
+		// 	    PersonId = 10,
+		// 	    Name = "William",
+		// 	    CityId = 1
+		// 	}
+		//     );
+		//     modelBuilder.Entity<Language>().HasData(
+		// 	new Book { BookId = 1, AuthorId = 1, Title = "Hamlet" },
+		// 	new Book { BookId = 2, AuthorId = 1, Title = "King Lear" },
+		// 	new Book { BookId = 3, AuthorId = 1, Title = "Othello" }
+		//     );
+		}
             }
         }
     }

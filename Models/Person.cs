@@ -9,7 +9,7 @@ namespace mvc_ef.Models
         public string Name { get; set; }
 
 	// One-to-Many (Person - City)
-	public int CityId { get; set; }
+	// public int CityId { get; set; }
 	public City City { get; set; }
 
 

@@ -9,6 +9,7 @@ namespace mvc_ef.Models
         public string Name { get; set; }
 
 	// One-to-Many (City - Country)
-	public ICollection<City> City { get; set; }
+	// public ICollection<City> City { get; set; }
+	public ICollection<City> Cities { get; set; }
     }
 }

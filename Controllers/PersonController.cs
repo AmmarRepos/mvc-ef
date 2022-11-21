@@ -157,6 +157,26 @@ namespace mvc_ef.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+
+        public async Task<IActionResult> Language(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var person = await _context.Person
+                .Include(p => p.Languages)
+                .FirstOrDefaultAsync(m => m.PersonId == id);
+            if (person == null)
+            {
+                return NotFound();
+            }
+
+            return View(person);
+        }
+
+	
         private bool PersonExists(int id)
         {
             return _context.Person.Any(e => e.PersonId == id);

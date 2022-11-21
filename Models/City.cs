@@ -10,11 +10,12 @@ namespace mvc_ef.Models
         public string Name { get; set; }
 
 	// One-to-Many (City - Country)
-	public int CountryId { get; set; }
+	// public int CountryId { get; set; }
 	public Country Country { get; set; }
 
 	// One-to-Many (Person - City)
-	public ICollection<Person> Person { get; set; }
+	// public ICollection<Person> Person { get; set; }
+	public ICollection<Person> People { get; set; }
 
 
     }
