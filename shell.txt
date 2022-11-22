@@ -1,0 +1,852 @@
+Welcome to the Emacs shell
+
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build
+MSBuild version 17.3.2+561848881 for .NET
+  Determining projects to restore...
+Welcome to the Emacs shell
+
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $   All projects are up-to-date for restore.
+
+    13 Warning(s)
+    90 Error(s)
+Time Elapsed 00:00:04.52
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build
+MSBuild version 17.3.2+561848881 for .NET
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\CityController.cs(24,64): error CS1061: 'City' doWelcome to the Emacs shell
+
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ es not contain a definition for 'Countries' and no accessible extension method 'Countries' accepting a first argument of type 'City' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+    13 Warning(s)
+    77 Error(s)
+
+Time Elapsed 00:00:05.03
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ 
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:m
+MSBuild version 17.3.2+561848881 for .NET
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(47,16): error CS0029: Cannot implicitly convert type 'int' to 'mvc_ef.Models.Country' [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(53,16): error CS0029: Cannot implicitly convert type 'int' to 'mvc_ef.Models.Country' [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(59,16): error CS0029: Cannot implicitly convert type 'int' to 'mvc_ef.Models.Country' [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+
+    13 Warning(s)
+    80 Error(s)
+
+Time Elapsed 00:00:04.97
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+MSBuild version 17.3.2+561848881 for .NET
+
+Build FAILED.
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\City\Create.cshtml(16,135): error CS1061: 'City' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'City' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\City\Create.cshtml(17,135): error CS1061: 'City' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'City' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\City\Create.cshtml(18,147): error CS1061: 'City' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'City' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+    13 Warning(s)
+    77 Error(s)
+
+Time Elapsed 00:00:02.55
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ Welcome to the Emacs shell
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+MSBuild version 17.3.2+561848881 for .NET
+// Fixed city controller and its views
+Build FAILED.
+    71 Error(s)
+Time Elapsed 00:00:04.76
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Index.cshtml(34,48): warning CS8602: Dereference of a possibly null reference. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Details.cshtml(23,40): warning CS8602: Dereference of a possibly null reference. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Delete.cshtml(24,40): warning CS8602: Dereference of a possibly null reference. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Index.cshtml(22,54): error CS1061: 'IEnumerable<Person>' does not contain a definition for 'City' and no accessible extension method 'City' accepting a first argument of type 'IEnumerable<Person>' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Index.cshtml(22,59): error CS1061: 'City' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'City' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Index.cshtml(37,58): error CS1061: 'City' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'City' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+    16 Warning(s)
+    66 Error(s)
+Time Elapsed 00:00:02.44
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ 
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\PersonLanguageController.cs(29,41): error CS1061: 'SqliteContext' does not contain a definition for 'Person' and no accessible extension method 'Person' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\PersonLanguageController.cs(43,29): error CS1061: 'SqliteContext' does not contain a definition for 'Person' and no accessible extension method 'Person' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\PersonController.cs(25,42): error CS1061: 'SqliteContext' does not contain a definition for 'Person' and no accessible extension method 'Person' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\PersonController.cs(37,41): error CS1061: 'SqliteContext' does not contain a definition for 'Person' and no accessible extension method 'Person' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\PersonController.cs(84,41): error CS1061: 'SqliteContext' does not contain a definition for 'Person' and no accessible extension method 'Person' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\PersonController.cs(138,41): error CS1061: 'SqliteContext' does not contain a definition for 'Person' and no accessible extension method 'Person' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\PersonController.cs(154,41): error CS1061: 'SqliteContext' does not contain a definition for 'Person' and no accessible extension method 'Person' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\PersonController.cs(155,22): error CS1061: 'SqliteContext' does not contain a definition for 'Person' and no accessible extension method 'Person' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\PersonController.cs(168,41): error CS1061: 'SqliteContext' does not contain a definition for 'Person' and no accessible extension method 'Person' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\PersonController.cs(182,29): error CS1061: 'SqliteContext' does not contain a definition for 'Person' and no accessible extension method 'Person' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\LanguageController.cs(24,40): error CS1061: 'SqliteContext' does not contain a definition for 'Language' and no accessible extension method 'Language' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\LanguageController.cs(35,43): error CS1061: 'SqliteContext' does not contain a definition for 'Language' and no accessible extension method 'Language' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\LanguageController.cs(75,43): error CS1061: 'SqliteContext' does not contain a definition for 'Language' and no accessible extension method 'Language' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\LanguageController.cs(126,43): error CS1061: 'SqliteContext' does not contain a definition for 'Language' and no accessible extension method 'Language' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\LanguageController.cs(141,43): error CS1061: 'SqliteContext' does not contain a definition for 'Language' and no accessible extension method 'Language' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\LanguageController.cs(142,22): error CS1061: 'SqliteContext' does not contain a definition for 'Language' and no accessible extension method 'Language' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\LanguageController.cs(149,29): error CS1061: 'SqliteContext' does not contain a definition for 'Language' and no accessible extension method 'Language' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\CityController.cs(24,64): error CS1061: 'City' does not contain a definition for 'Countries' and no accessible extension method 'Countries' accepting a first argument of type 'City' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\CityController.cs(37,33): error CS1061: 'City' does not contain a definition for 'Countries' and no accessible extension method 'Countries' accepting a first argument of type 'City' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\CityController.cs(79,39): error CS1061: 'SqliteContext' does not contain a definition for 'City' and no accessible extension method 'City' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Index.cshtml(16,54): error CS1061: 'Person' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Person' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Index.cshtml(22,59): error CS1061: 'City' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'City' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Index.cshtml(22,54): error CS1061: 'IEnumerable<Person>' does not contain a definition for 'City' and no accessible extension method 'City' accepting a first argument of type 'IEnumerable<Person>' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Index.cshtml(31,53): error CS1061: 'Person' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Person' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Index.cshtml(37,58): error CS1061: 'City' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'City' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\CityController.cs(132,39): error CS1061: 'SqliteContext' does not contain a definition for 'City' and no accessible extension method 'City' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\CityController.cs(148,39): error CS1061: 'SqliteContext' does not contain a definition for 'City' and no accessible extension method 'City' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\CityController.cs(149,22): error CS1061: 'SqliteContext' does not contain a definition for 'City' and no accessible extension method 'City' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\CityController.cs(156,29): error CS1061: 'SqliteContext' does not contain a definition for 'City' and no accessible extension method 'City' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Edit.cshtml(17,135): error CS1061: 'Person' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Person' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Edit.cshtml(18,135): error CS1061: 'Person' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Person' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Edit.cshtml(19,147): error CS1061: 'Person' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Person' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\City\Delete.cshtml(18,46): error CS1061: 'City' does not contain a definition for 'CityxoName' and no accessible extension method 'CityxoName' accepting a first argument of type 'City' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Details.cshtml(14,50): error CS1061: 'Person' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Person' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Details.cshtml(17,46): error CS1061: 'Person' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Person' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Delete.cshtml(15,50): error CS1061: 'Person' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Person' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Delete.cshtml(18,46): error CS1061: 'Person' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Person' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Create.cshtml(16,135): error CS1061: 'Person' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Person' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Create.cshtml(17,135): error CS1061: 'Person' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Person' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Create.cshtml(18,147): error CS1061: 'Person' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Person' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\PersonLanguage\Language.cshtml(14,50): error CS1061: 'Person' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Person' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\PersonLanguage\Language.cshtml(17,46): error CS1061: 'Person' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Person' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\PersonLanguage\Language.cshtml(25,39): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Index.cshtml(16,54): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Index.cshtml(25,53): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Edit.cshtml(17,135): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Edit.cshtml(18,135): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Edit.cshtml(19,147): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Details.cshtml(14,50): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Details.cshtml(17,46): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Delete.cshtml(15,50): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Delete.cshtml(18,46): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Create.cshtml(16,135): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Create.cshtml(17,135): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Create.cshtml(18,147): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+    16 Warning(s)
+    55 Error(s)
+
+Time Elapsed 00:00:04.63
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+MSBuild version 17.3.2+561848881 for .NET
+Build FAILED.
+
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\PersonLanguageController.cs(29,41): error CS1061: 'SqliteContext' does not contain a definition for 'Person' and no accessible extension method 'Person' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\PersonLanguageController.cs(43,29): error CS1061: 'SqliteContext' does not contain a definition for 'Person' and no accessible extension method 'Person' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\CityController.cs(24,64): error CS1061: 'City' does not contain a definition for 'Countries' and no accessible extension method 'Countries' accepting a first argument of type 'City' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\CityController.cs(37,33): error CS1061: 'City' does not contain a definition for 'Countries' and no accessible extension method 'Countries' accepting a first argument of type 'City' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\LanguageController.cs(24,40): error CS1061: 'SqliteContext' does not contain a definition for 'Language' and no accessible extension method 'Language' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\CityController.cs(79,39): error CS1061: 'SqliteContext' does not contain a definition for 'City' and no accessible extension method 'City' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\LanguageController.cs(35,43): error CS1061: 'SqliteContext' does not contain a definition for 'Language' and no accessible extension method 'Language' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\LanguageController.cs(75,43): error CS1061: 'SqliteContext' does not contain a definition for 'Language' and no accessible extension method 'Language' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\CityController.cs(132,39): error CS1061: 'SqliteContext' does not contain a definition for 'City' and no accessible extension method 'City' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\CityController.cs(148,39): error CS1061: 'SqliteContext' does not contain a definition for 'City' and no accessible extension method 'City' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\CityController.cs(149,22): error CS1061: 'SqliteContext' does not contain a definition for 'City' and no accessible extension method 'City' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\CityController.cs(156,29): error CS1061: 'SqliteContext' does not contain a definition for 'City' and no accessible extension method 'City' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\LanguageController.cs(126,43): error CS1061: 'SqliteContext' does not contain a definition for 'Language' and no accessible extension method 'Language' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\LanguageController.cs(141,43): error CS1061: 'SqliteContext' does not contain a definition for 'Language' and no accessible extension method 'Language' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\LanguageController.cs(142,22): error CS1061: 'SqliteContext' does not contain a definition for 'Language' and no accessible extension method 'Language' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\LanguageController.cs(149,29): error CS1061: 'SqliteContext' does not contain a definition for 'Language' and no accessible extension method 'Language' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\City\Delete.cshtml(18,46): error CS1061: 'City' does not contain a definition for 'CityxoName' and no accessible extension method 'CityxoName' accepting a first argument of type 'City' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\PersonLanguage\Language.cshtml(14,50): error CS1061: 'Person' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Person' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\PersonLanguage\Language.cshtml(17,46): error CS1061: 'Person' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Person' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\PersonLanguage\Language.cshtml(25,39): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Index.cshtml(16,54): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Index.cshtml(25,53): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Edit.cshtml(17,135): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Edit.cshtml(18,135): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Edit.cshtml(19,147): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Details.cshtml(14,50): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Details.cshtml(17,46): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Delete.cshtml(15,50): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Delete.cshtml(18,46): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Create.cshtml(16,135): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Create.cshtml(17,135): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Create.cshtml(18,147): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+    19 Warning(s)
+    32 Error(s)
+
+Time Elapsed 00:00:04.58
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+MSBuild version 17.3.2+561848881 for .NET
+    15 Warning(s)
+    32 Error(s)
+// Testing with nullable properties in the mdoel
+Time Elapsed 00:00:04.53
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+MSBuild version 17.3.2+561848881 for .NET
+    15 Warning(s)
+    31 Error(s)
+// context.dbset.relationship
+Time Elapsed 00:00:02.14
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+MSBuild version 17.3.2+561848881 for .NET
+
+Build FAILED.
+
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\PersonLanguageController.cs(29,41): error CS1061: 'SqliteContext' does not contain a definition for 'Person' and no accessible extension method 'Person' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\PersonLanguageController.cs(43,29): error CS1061: 'SqliteContext' does not contain a definition for 'Person' and no accessible extension method 'Person' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Create.cshtml(16,135): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Create.cshtml(17,135): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Create.cshtml(18,147): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Delete.cshtml(15,50): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Delete.cshtml(18,46): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Index.cshtml(16,54): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Index.cshtml(25,53): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\PersonLanguage\Language.cshtml(14,50): error CS1061: 'Person' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Person' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\PersonLanguage\Language.cshtml(17,46): error CS1061: 'Person' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Person' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\PersonLanguage\Language.cshtml(25,39): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Edit.cshtml(17,135): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Edit.cshtml(18,135): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Edit.cshtml(19,147): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Details.cshtml(14,50): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Details.cshtml(17,46): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\LanguageController.cs(24,40): error CS1061: 'SqliteContext' does not contain a definition for 'Language' and no accessible extension method 'Language' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\CityController.cs(37,33): error CS1061: 'City' does not contain a definition for 'Countries' and no accessible extension method 'Countries' accepting a first argument of type 'City' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\LanguageController.cs(35,43): error CS1061: 'SqliteContext' does not contain a definition for 'Language' and no accessible extension method 'Language' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\LanguageController.cs(75,43): error CS1061: 'SqliteContext' does not contain a definition for 'Language' and no accessible extension method 'Language' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\CityController.cs(79,39): error CS1061: 'SqliteContext' does not contain a definition for 'City' and no accessible extension method 'City' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\LanguageController.cs(126,43): error CS1061: 'SqliteContext' does not contain a definition for 'Language' and no accessible extension method 'Language' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\LanguageController.cs(141,43): error CS1061: 'SqliteContext' does not contain a definition for 'Language' and no accessible extension method 'Language' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\LanguageController.cs(142,22): error CS1061: 'SqliteContext' does not contain a definition for 'Language' and no accessible extension method 'Language' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\LanguageController.cs(149,29): error CS1061: 'SqliteContext' does not contain a definition for 'Language' and no accessible extension method 'Language' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\CityController.cs(132,39): error CS1061: 'SqliteContext' does not contain a definition for 'City' and no accessible extension method 'City' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\CityController.cs(148,39): error CS1061: 'SqliteContext' does not contain a definition for 'City' and no accessible extension method 'City' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\CityController.cs(149,22): error CS1061: 'SqliteContext' does not contain a definition for 'City' and no accessible extension method 'City' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\CityController.cs(156,29): error CS1061: 'SqliteContext' does not contain a definition for 'City' and no accessible extension method 'City' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\City\Delete.cshtml(18,46): error CS1061: 'City' does not contain a definition for 'CityxoName' and no accessible extension method 'CityxoName' accepting a first argument of type 'City' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+    19 Warning(s)
+    31 Error(s)
+
+Time Elapsed 00:00:02.18
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+MSBuild version 17.3.2+561848881 for .NET
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\CityController.cs(38,45): error CS1061: 'City' does not contain a definition for 'Id' and no accessible extension method 'Id' accepting a first argument of type 'City' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\CityController.cs(79,39): error CS1061: 'SqliteContext' does not contain a definition for 'City' and no accessible extension method 'City' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Delete.cshtml(15,50): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Create.cshtml(16,135): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Create.cshtml(17,135): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Create.cshtml(18,147): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+
+Build FAILED.
+
+
+    21 Warning(s)
+    6 Error(s)
+
+Time Elapsed 00:00:04.63
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+MSBuild version 17.3.2+561848881 for .NET
+Build FAILED.
+
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Delete.cshtml(15,50): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+    21 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:02.29
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+MSBuild version 17.3.2+561848881 for .NET
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\Person.cs(8,23): warning CS8618: Non-nullable property 'PersonName' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\Person.cs(15,39): warning CS8618: Non-nullable property 'Languages' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\Langauge.cs(8,23): warning CS8618: Non-nullable property 'LanguageName' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\Langauge.cs(10,37): warning CS8618: Non-nullable property 'People' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\Country.cs(8,23): warning CS8618: Non-nullable property 'CountryName' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\Country.cs(11,27): warning CS8618: Non-nullable property 'Cities' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\City.cs(9,23): warning CS8618: Non-nullable property 'CityName' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\City.cs(13,17): warning CS8618: Non-nullable property 'Country' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\PersonController.cs(155,36): warning CS8604: Possible null reference argument for parameter 'entity' in 'EntityEntry<Person> DbSet<Person>.Remove(Person entity)'. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\LanguageController.cs(142,39): warning CS8604: Possible null reference argument for parameter 'entity' in 'EntityEntry<Language> DbSet<Language>.Remove(Language entity)'. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Data\SqliteContext.cs(10,16): warning CS8618: Non-nullable property 'People' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Data\SqliteContext.cs(10,16): warning CS8618: Non-nullable property 'Cities' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Data\SqliteContext.cs(10,16): warning CS8618: Non-nullable property 'Countries' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Data\SqliteContext.cs(10,16): warning CS8618: Non-nullable property 'Languages' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\CountryController.cs(142,39): warning CS8604: Possible null reference argument for parameter 'entity' in 'EntityEntry<Country> DbSet<Country>.Remove(Country entity)'. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\CityController.cs(149,36): warning CS8604: Possible null reference argument for parameter 'entity' in 'EntityEntry<City> DbSet<City>.Remove(City entity)'. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Index.cshtml(22,48): warning CS8602: Dereference of a possibly null reference. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Index.cshtml(34,48): warning CS8602: Dereference of a possibly null reference. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Index.cshtml(37,48): warning CS8602: Dereference of a possibly null reference. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Details.cshtml(23,40): warning CS8602: Dereference of a possibly null reference. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Delete.cshtml(24,40): warning CS8602: Dereference of a possibly null reference. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+
+Build succeeded.
+
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\Person.cs(8,23): warning CS8618: Non-nullable property 'PersonName' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\Person.cs(15,39): warning CS8618: Non-nullable property 'Languages' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\Langauge.cs(8,23): warning CS8618: Non-nullable property 'LanguageName' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\Langauge.cs(10,37): warning CS8618: Non-nullable property 'People' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\Country.cs(8,23): warning CS8618: Non-nullable property 'CountryName' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\Country.cs(11,27): warning CS8618: Non-nullable property 'Cities' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\City.cs(9,23): warning CS8618: Non-nullable property 'CityName' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\City.cs(13,17): warning CS8618: Non-nullable property 'Country' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\PersonController.cs(155,36): warning CS8604: Possible null reference argument for parameter 'entity' in 'EntityEntry<Person> DbSet<Person>.Remove(Person entity)'. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\LanguageController.cs(142,39): warning CS8604: Possible null reference argument for parameter 'entity' in 'EntityEntry<Language> DbSet<Language>.Remove(Language entity)'. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Data\SqliteContext.cs(10,16): warning CS8618: Non-nullable property 'People' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Data\SqliteContext.cs(10,16): warning CS8618: Non-nullable property 'Cities' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Data\SqliteContext.cs(10,16): warning CS8618: Non-nullable property 'Countries' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Data\SqliteContext.cs(10,16): warning CS8618: Non-nullable property 'Languages' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\CountryController.cs(142,39): warning CS8604: Possible null reference argument for parameter 'entity' in 'EntityEntry<Country> DbSet<Country>.Remove(Country entity)'. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\CityController.cs(149,36): warning CS8604: Possible null reference argument for parameter 'entity' in 'EntityEntry<City> DbSet<City>.Remove(City entity)'. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Index.cshtml(22,48): warning CS8602: Dereference of a possibly null reference. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Index.cshtml(34,48): warning CS8602: Dereference of a possibly null reference. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Index.cshtml(37,48): warning CS8602: Dereference of a possibly null reference. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Details.cshtml(23,40): warning CS8602: Dereference of a possibly null reference. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Delete.cshtml(24,40): warning CS8602: Dereference of a possibly null reference. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+    21 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:02.51
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet run
+Building...
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+fail: Microsoft.EntityFrameworkCore.Database.Command[20102]
+      Failed executing DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Countries" AS "c")
+fail: Microsoft.EntityFrameworkCore.Query[10100]
+      An exception occurred while iterating over the results of a query for context type 'SqliteContext'.
+      Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Countries'.
+         at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+         at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+         at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+         at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+         at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+         at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+         at System.Data.Common.DbCommand.ExecuteReader()
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+         at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+         at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__19_0(DbContext _, Enumerator enumerator)
+         at Microsoft.EntityFrameworkCore.Storage.NonRetryingExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+         at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+      Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Countries'.
+         at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+         at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+         at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+         at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+         at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+         at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+         at System.Data.Common.DbCommand.ExecuteReader()
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+         at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+         at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__19_0(DbContext _, Enumerator enumerator)
+         at Microsoft.EntityFrameworkCore.Storage.NonRetryingExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+         at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+Unhandled exception. Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Countries'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__19_0(DbContext _, Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Storage.NonRetryingExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.TryGetSingle[TSource](IEnumerable`1 source, Boolean& found)
+   at lambda_method6(Closure , QueryContext )
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.Any[TSource](IQueryable`1 source)
+   at mvc_ef.Models.SeedData.Initialize(IServiceProvider serviceProvider) in c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs:line 17
+   at Program.<Main>$(String[] args) in c:\Users\Lexicon\Desktop\Repos\mvc-ef\Program.cs:line 27
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet ef -h
+Entity Framework Core .NET Command-line Tools 6.0.0
+
+Usage: dotnet ef [options] [command]
+
+Options:
+  --version        Show version information
+  -h|--help        Show help information
+  -v|--verbose     Show verbose output.
+  --no-color       Don't colorize output.
+  --prefix-output  Prefix output with level.
+
+Commands:
+  database    Commands to manage the database.
+  dbcontext   Commands to manage DbContext types.
+  migrations  Commands to manage migrations.
+
+Use "dotnet ef [command] --help" for more information about a command.
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet ef migrations InitialeCreate
+Build started...
+Build succeeded.
+Specify --help for a list of available options and commands.
+Unrecognized command or argument 'InitialeCreate'
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet ef migrations -h
+
+
+Usage: dotnet ef migrations [options] [command]
+
+Options:
+  -h|--help        Show help information
+  -v|--verbose     Show verbose output.
+  --no-color       Don't colorize output.
+  --prefix-output  Prefix output with level.
+
+Commands:
+  add     Adds a new migration.
+  bundle  Creates an executable to update the database.
+  list    Lists available migrations.
+  remove  Removes the last migration.
+  script  Generates a SQL script from migrations.
+
+Use "migrations [command] --help" for more information about a command.
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet ef migrations add InitialeCreate
+Build started...
+Build succeeded.
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+Done. To undo this action, use 'ef migrations remove'
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet ef database update
+Build started...
+Build succeeded.
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      PRAGMA journal_mode = 'wal';
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "__EFMigrationsHistory" (
+          "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+          "ProductVersion" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "MigrationId", "ProductVersion"
+      FROM "__EFMigrationsHistory"
+      ORDER BY "MigrationId";
+info: Microsoft.EntityFrameworkCore.Migrations[20402]
+      Applying migration '20221122134820_InitialeCreate'.
+Applying migration '20221122134820_InitialeCreate'.
+fail: Microsoft.EntityFrameworkCore.Database.Command[20102]
+      Failed executing DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      ALTER TABLE "Person" RENAME TO "People";
+Failed executing DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE "Person" RENAME TO "People";
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Person'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQuery(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.Design.Internal.MigrationsOperations.UpdateDatabase(String targetMigration, String connectionString, String contextType)
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.UpdateDatabaseImpl(String targetMigration, String connectionString, String contextType)
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.UpdateDatabase.<>c__DisplayClass0_0.<.ctor>b__0()
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.OperationBase.Execute(Action action)
+SQLite Error 1: 'no such table: Person'.
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet ef database update
+Build started...
+Build succeeded.
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "MigrationId", "ProductVersion"
+      FROM "__EFMigrationsHistory"
+      ORDER BY "MigrationId";
+info: Microsoft.EntityFrameworkCore.Migrations[20402]
+      Applying migration '20221122134820_InitialeCreate'.
+Applying migration '20221122134820_InitialeCreate'.
+fail: Microsoft.EntityFrameworkCore.Database.Command[20102]
+      Failed executing DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      ALTER TABLE "Person" RENAME TO "People";
+Failed executing DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE "Person" RENAME TO "People";
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Person'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQuery(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.Design.Internal.MigrationsOperations.UpdateDatabase(String targetMigration, String connectionString, String contextType)
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.UpdateDatabaseImpl(String targetMigration, String connectionString, String contextType)
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.UpdateDatabase.<>c__DisplayClass0_0.<.ctor>b__0()
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.OperationBase.Execute(Action action)
+SQLite Error 1: 'no such table: Person'.
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet ef migrations add InitialeCreate2
+Build started...
+Build succeeded.
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+Done. To undo this action, use 'ef migrations remove'
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet ef database update
+Build started...
+Build succeeded.
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "MigrationId", "ProductVersion"
+      FROM "__EFMigrationsHistory"
+      ORDER BY "MigrationId";
+info: Microsoft.EntityFrameworkCore.Migrations[20402]
+      Applying migration '20221122134820_InitialeCreate'.
+Applying migration '20221122134820_InitialeCreate'.
+fail: Microsoft.EntityFrameworkCore.Database.Command[20102]
+      Failed executing DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      ALTER TABLE "Person" RENAME TO "People";
+Failed executing DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE "Person" RENAME TO "People";
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Person'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQuery(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.Design.Internal.MigrationsOperations.UpdateDatabase(String targetMigration, String connectionString, String contextType)
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.UpdateDatabaseImpl(String targetMigration, String connectionString, String contextType)
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.UpdateDatabase.<>c__DisplayClass0_0.<.ctor>b__0()
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.OperationBase.Execute(Action action)
+SQLite Error 1: 'no such table: Person'.
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet ef migrations -h
+
+
+Usage: dotnet ef migrations [options] [command]
+
+Options:
+  -h|--help        Show help information
+  -v|--verbose     Show verbose output.
+  --no-color       Don't colorize output.
+  --prefix-output  Prefix output with level.
+
+Commands:
+  add     Adds a new migration.
+  bundle  Creates an executable to update the database.
+  list    Lists available migrations.
+  remove  Removes the last migration.
+  script  Generates a SQL script from migrations.
+
+Use "migrations [command] --help" for more information about a command.
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet ef migrations remove
+Build started...
+Build succeeded.
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "MigrationId", "ProductVersion"
+      FROM "__EFMigrationsHistory"
+      ORDER BY "MigrationId";
+Removing migration '20221122142920_InitialeCreate2'.
+Reverting the model snapshot.
+Done.
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet ef migrations remove
+Build started...
+Build succeeded.
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "MigrationId", "ProductVersion"
+      FROM "__EFMigrationsHistory"
+      ORDER BY "MigrationId";
+Removing migration '20221122134820_InitialeCreate'.
+Removing model snapshot.
+Done.
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet ef migrations add IntitialCreate
+Build started...
+Build succeeded.
+System.ArgumentNullException: Value cannot be null. (Parameter 'connectionString')
+   at Microsoft.EntityFrameworkCore.Utilities.Check.NotEmpty(String value, String parameterName)
+   at Microsoft.EntityFrameworkCore.SqliteDbContextOptionsBuilderExtensions.UseSqlite(DbContextOptionsBuilder optionsBuilder, String connectionString, Action`1 sqliteOptionsAction)
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__0(DbContextOptionsBuilder options) in c:\Users\Lexicon\Desktop\Repos\mvc-ef\Program.cs:line 8
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.<>c__DisplayClass1_0`2.<AddDbContext>b__0(IServiceProvider p, DbContextOptionsBuilder b)
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.CreateDbContextOptions[TContext](IServiceProvider applicationServiceProvider, Action`2 optionsAction)
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.<>c__DisplayClass17_0`1.<AddCoreServices>b__0(IServiceProvider p)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.<>c__17`1.<AddCoreServices>b__17_1(IServiceProvider p)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitIEnumerable(IEnumerableCallSite enumerableCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetServices[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.Design.Internal.DbContextOperations.FindContextTypes()
+   at Microsoft.EntityFrameworkCore.Design.Internal.DbContextOperations.FindContextType(String name)
+   at Microsoft.EntityFrameworkCore.Design.Internal.DbContextOperations.CreateContext(String contextType)
+   at Microsoft.EntityFrameworkCore.Design.Internal.MigrationsOperations.AddMigration(String name, String outputDir, String contextType, String namespace)
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.AddMigrationImpl(String name, String outputDir, String contextType, String namespace)
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.AddMigration.<>c__DisplayClass0_0.<.ctor>b__0()
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.OperationBase.<>c__DisplayClass3_0`1.<Execute>b__0()
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.OperationBase.Execute(Action action)
+Value cannot be null. (Parameter 'connectionString')
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet ef migrations add IntitialCreate
+Build started...
+Build succeeded.
+An error occurred while accessing the Microsoft.Extensions.Hosting services. Continuing without the application service provider. Error: Failed to load configuration from file 'c:\Users\Lexicon\Desktop\Repos\mvc-ef\appsettings.json'.
+Unable to create an object of type 'SqliteContext'. For the different patterns supported at design time, see https://go.microsoft.com/fwlink/?linkid=851728
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet ef migrations add IntitialCreate
+Build started...
+Build succeeded.
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+Done. To undo this action, use 'ef migrations remove'
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet ef migrations remove
+Build started...
+Build succeeded.
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+Removing migration '20221122150221_IntitialCreate'.
+Removing model snapshot.
+Done.
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet ef migrations add IntitialCreate
+Build started...
+Build succeeded.
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+Done. To undo this action, use 'ef migrations remove'
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet ef database update
+Build started...
+Build succeeded.
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      PRAGMA journal_mode = 'wal';
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "__EFMigrationsHistory" (
+          "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+          "ProductVersion" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "MigrationId", "ProductVersion"
+      FROM "__EFMigrationsHistory"
+      ORDER BY "MigrationId";
+info: Microsoft.EntityFrameworkCore.Migrations[20402]
+      Applying migration '20221122150939_IntitialCreate'.
+Applying migration '20221122150939_IntitialCreate'.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Countries" (
+          "CountryId" INTEGER NOT NULL CONSTRAINT "PK_Countries" PRIMARY KEY AUTOINCREMENT,
+          "CountryName" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Languages" (
+          "LanguageId" INTEGER NOT NULL CONSTRAINT "PK_Languages" PRIMARY KEY AUTOINCREMENT,
+          "LanguageName" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Cities" (
+          "CityId" INTEGER NOT NULL CONSTRAINT "PK_Cities" PRIMARY KEY AUTOINCREMENT,
+          "CityName" TEXT NOT NULL,
+          "CountryId" INTEGER NOT NULL,
+          CONSTRAINT "FK_Cities_Countries_CountryId" FOREIGN KEY ("CountryId") REFERENCES "Countries" ("CountryId") ON DELETE CASCADE
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "People" (
+          "PersonId" INTEGER NOT NULL CONSTRAINT "PK_People" PRIMARY KEY AUTOINCREMENT,
+          "PersonName" TEXT NOT NULL,
+          "CityId" INTEGER NOT NULL,
+          CONSTRAINT "FK_People_Cities_CityId" FOREIGN KEY ("CityId") REFERENCES "Cities" ("CityId") ON DELETE CASCADE
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "LanguagePerson" (
+          "LanguagesLanguageId" INTEGER NOT NULL,
+          "PeoplePersonId" INTEGER NOT NULL,
+          CONSTRAINT "PK_LanguagePerson" PRIMARY KEY ("LanguagesLanguageId", "PeoplePersonId"),
+          CONSTRAINT "FK_LanguagePerson_Languages_LanguagesLanguageId" FOREIGN KEY ("LanguagesLanguageId") REFERENCES "Languages" ("LanguageId") ON DELETE CASCADE,
+          CONSTRAINT "FK_LanguagePerson_People_PeoplePersonId" FOREIGN KEY ("PeoplePersonId") REFERENCES "People" ("PersonId") ON DELETE CASCADE
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX "IX_Cities_CountryId" ON "Cities" ("CountryId");
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX "IX_LanguagePerson_PeoplePersonId" ON "LanguagePerson" ("PeoplePersonId");
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX "IX_People_CityId" ON "People" ("CityId");
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+      VALUES ('20221122150939_IntitialCreate', '6.0.0');
+Done.
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet run
+Building...
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Countries" AS "c")
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 8)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Countries" ("CountryId", "CountryName")
+      VALUES (@p0, @p1);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 8)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Countries" ("CountryId", "CountryName")
+      VALUES (@p0, @p1);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 8)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Countries" ("CountryId", "CountryName")
+      VALUES (@p0, @p1);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 9)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Languages" ("LanguageId", "LanguageName")
+      VALUES (@p0, @p1);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 9)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Languages" ("LanguageId", "LanguageName")
+      VALUES (@p0, @p1);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 9)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Languages" ("LanguageId", "LanguageName")
+      VALUES (@p0, @p1);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p2='?' (DbType = Int32), @p3='?' (Size = 5), @p4='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Cities" ("CityId", "CityName", "CountryId")
+      VALUES (@p2, @p3, @p4);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 5), @p2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Cities" ("CityId", "CityName", "CountryId")
+      VALUES (@p0, @p1, @p2);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 5), @p2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Cities" ("CityId", "CityName", "CountryId")
+      VALUES (@p0, @p1, @p2);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (Size = 7)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "People" ("PersonId", "CityId", "PersonName")
+      VALUES (@p3, @p4, @p5);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (Size = 7)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "People" ("PersonId", "CityId", "PersonName")
+      VALUES (@p0, @p1, @p2);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (Size = 7)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "People" ("PersonId", "CityId", "PersonName")
+      VALUES (@p0, @p1, @p2);
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: https://localhost:7223
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5193
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: c:\Users\Lexicon\Desktop\Repos\mvc-ef\
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."PersonId", "p"."CityId", "p"."PersonName", "c"."CityId", "c"."CityName", "c"."CountryId"
+      FROM "People" AS "p"
+      INNER JOIN "Cities" AS "c" ON "p"."CityId" = "c"."CityId"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."PersonId", "t"."CityId", "t"."PersonName", "t0"."LanguagesLanguageId", "t0"."PeoplePersonId", "t0"."LanguageId", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."PersonId", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."PersonId" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesLanguageId", "l"."PeoplePersonId", "l0"."LanguageId", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesLanguageId" = "l0"."LanguageId"
+      ) AS "t0" ON "t"."PersonId" = "t0"."PeoplePersonId"
+      ORDER BY "t"."PersonId", "t0"."LanguagesLanguageId", "t0"."PeoplePersonId"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "c"."CountryId", "c"."CountryName"
+      FROM "Countries" AS "c"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "l"."LanguageId", "l"."LanguageName"
+      FROM "Languages" AS "l"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "c"."CityId", "c"."CityName", "c"."CountryId", "c0"."CountryId", "c0"."CountryName"
+      FROM "Cities" AS "c"
+      INNER JOIN "Countries" AS "c0" ON "c"."CountryId" = "c0"."CountryId"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."PersonId", "p"."CityId", "p"."PersonName", "c"."CityId", "c"."CityName", "c"."CountryId"
+      FROM "People" AS "p"
+      INNER JOIN "Cities" AS "c" ON "p"."CityId" = "c"."CityId"
+interrupt
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ exit

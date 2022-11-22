@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace mvc_ef.Migrations
 {
     [DbContext(typeof(SqliteContext))]
-    [Migration("20221118082359_InitialCreate9")]
-    partial class InitialCreate9
+    [Migration("20221122150939_IntitialCreate")]
+    partial class IntitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -38,18 +38,18 @@ namespace mvc_ef.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("CountryId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Name")
+                    b.Property<string>("CityName")
                         .IsRequired()
                         .HasColumnType("TEXT");
+
+                    b.Property<int>("CountryId")
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("CityId");
 
                     b.HasIndex("CountryId");
 
-                    b.ToTable("City");
+                    b.ToTable("Cities");
                 });
 
             modelBuilder.Entity("mvc_ef.Models.Country", b =>
@@ -58,13 +58,13 @@ namespace mvc_ef.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("CountryName")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("CountryId");
 
-                    b.ToTable("Country");
+                    b.ToTable("Countries");
                 });
 
             modelBuilder.Entity("mvc_ef.Models.Language", b =>
@@ -73,13 +73,13 @@ namespace mvc_ef.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("LanguageName")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("LanguageId");
 
-                    b.ToTable("Language");
+                    b.ToTable("Languages");
                 });
 
             modelBuilder.Entity("mvc_ef.Models.Person", b =>
@@ -91,7 +91,7 @@ namespace mvc_ef.Migrations
                     b.Property<int>("CityId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("PersonName")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
@@ -99,7 +99,7 @@ namespace mvc_ef.Migrations
 
                     b.HasIndex("CityId");
 
-                    b.ToTable("Person");
+                    b.ToTable("People");
                 });
 
             modelBuilder.Entity("LanguagePerson", b =>
@@ -120,7 +120,7 @@ namespace mvc_ef.Migrations
             modelBuilder.Entity("mvc_ef.Models.City", b =>
                 {
                     b.HasOne("mvc_ef.Models.Country", "Country")
-                        .WithMany("City")
+                        .WithMany("Cities")
                         .HasForeignKey("CountryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -131,7 +131,7 @@ namespace mvc_ef.Migrations
             modelBuilder.Entity("mvc_ef.Models.Person", b =>
                 {
                     b.HasOne("mvc_ef.Models.City", "City")
-                        .WithMany("Person")
+                        .WithMany("People")
                         .HasForeignKey("CityId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -141,12 +141,12 @@ namespace mvc_ef.Migrations
 
             modelBuilder.Entity("mvc_ef.Models.City", b =>
                 {
-                    b.Navigation("Person");
+                    b.Navigation("People");
                 });
 
             modelBuilder.Entity("mvc_ef.Models.Country", b =>
                 {
-                    b.Navigation("City");
+                    b.Navigation("Cities");
                 });
 #pragma warning restore 612, 618
         }

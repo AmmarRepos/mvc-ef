@@ -22,7 +22,7 @@ namespace mvc_ef.Controllers
         // GET: Person
         public async Task<IActionResult> Index()
         {
-            var sqliteContext = _context.Person.Include(p => p.City);
+            var sqliteContext = _context.People.Include(p => p.City);
             return View(await sqliteContext.ToListAsync());
         }
 
@@ -34,7 +34,7 @@ namespace mvc_ef.Controllers
                 return NotFound();
             }
 
-            var person = await _context.Person
+            var person = await _context.People
                 .Include(p => p.City)
                 .FirstOrDefaultAsync(m => m.PersonId == id);
             if (person == null)
@@ -81,7 +81,7 @@ namespace mvc_ef.Controllers
                 return NotFound();
             }
 
-            var person = await _context.Person.FindAsync(id);
+            var person = await _context.People.FindAsync(id);
             if (person == null)
             {
                 return NotFound();
@@ -135,7 +135,7 @@ namespace mvc_ef.Controllers
                 return NotFound();
             }
 
-            var person = await _context.Person
+            var person = await _context.People
                 .Include(p => p.City)
                 .FirstOrDefaultAsync(m => m.PersonId == id);
             if (person == null)
@@ -151,8 +151,8 @@ namespace mvc_ef.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var person = await _context.Person.FindAsync(id);
-            _context.Person.Remove(person);
+            var person = await _context.People.FindAsync(id);
+            _context.People.Remove(person);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
@@ -165,7 +165,7 @@ namespace mvc_ef.Controllers
                 return NotFound();
             }
 
-            var person = await _context.Person
+            var person = await _context.People
                 .Include(p => p.Languages)
                 .FirstOrDefaultAsync(m => m.PersonId == id);
             if (person == null)
@@ -179,7 +179,7 @@ namespace mvc_ef.Controllers
 	
         private bool PersonExists(int id)
         {
-            return _context.Person.Any(e => e.PersonId == id);
+            return _context.People.Any(e => e.PersonId == id);
         }
     }
 }

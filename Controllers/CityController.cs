@@ -21,7 +21,7 @@ namespace mvc_ef.Controllers
         // GET: City
         public async Task<IActionResult> Index()
         {
-            var sqliteContext = _context.City.Include(c => c.Country);
+            var sqliteContext = _context.Cities.Include(c => c.Country);
             return View(await sqliteContext.ToListAsync());
         }
 
@@ -33,7 +33,7 @@ namespace mvc_ef.Controllers
                 return NotFound();
             }
 
-            var city = await _context.City
+            var city = await _context.Cities
                 .Include(c => c.Country)
                 .FirstOrDefaultAsync(m => m.CityId == id);
             if (city == null)
@@ -76,7 +76,7 @@ namespace mvc_ef.Controllers
                 return NotFound();
             }
 
-            var city = await _context.City.FindAsync(id);
+            var city = await _context.Cities.FindAsync(id);
             if (city == null)
             {
                 return NotFound();
@@ -129,7 +129,7 @@ namespace mvc_ef.Controllers
                 return NotFound();
             }
 
-            var city = await _context.City
+            var city = await _context.Cities
                 .Include(c => c.Country)
                 .FirstOrDefaultAsync(m => m.CityId == id);
             if (city == null)
@@ -145,15 +145,15 @@ namespace mvc_ef.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var city = await _context.City.FindAsync(id);
-            _context.City.Remove(city);
+            var city = await _context.Cities.FindAsync(id);
+            _context.Cities.Remove(city);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool CityExists(int id)
         {
-            return _context.City.Any(e => e.CityId == id);
+            return _context.Cities.Any(e => e.CityId == id);
         }
     }
 }

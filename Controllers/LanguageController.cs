@@ -21,7 +21,7 @@ namespace mvc_ef.Controllers
         // GET: Language
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Language.ToListAsync());
+            return View(await _context.Languages.ToListAsync());
         }
 
         // GET: Language/Details/5
@@ -32,7 +32,7 @@ namespace mvc_ef.Controllers
                 return NotFound();
             }
 
-            var language = await _context.Language
+            var language = await _context.Languages
                 .FirstOrDefaultAsync(m => m.LanguageId == id);
             if (language == null)
             {
@@ -72,7 +72,7 @@ namespace mvc_ef.Controllers
                 return NotFound();
             }
 
-            var language = await _context.Language.FindAsync(id);
+            var language = await _context.Languages.FindAsync(id);
             if (language == null)
             {
                 return NotFound();
@@ -123,7 +123,7 @@ namespace mvc_ef.Controllers
                 return NotFound();
             }
 
-            var language = await _context.Language
+            var language = await _context.Languages
                 .FirstOrDefaultAsync(m => m.LanguageId == id);
             if (language == null)
             {
@@ -138,15 +138,15 @@ namespace mvc_ef.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var language = await _context.Language.FindAsync(id);
-            _context.Language.Remove(language);
+            var language = await _context.Languages.FindAsync(id);
+            _context.Languages.Remove(language);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool LanguageExists(int id)
         {
-            return _context.Language.Any(e => e.LanguageId == id);
+            return _context.Languages.Any(e => e.LanguageId == id);
         }
     }
 }

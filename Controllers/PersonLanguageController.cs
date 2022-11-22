@@ -26,7 +26,7 @@ namespace mvc_ef.Controllers
                 return NotFound();
             }
 
-            var person = await _context.Person
+            var person = await _context.People
                 .Include(p => p.Languages)
                 .FirstOrDefaultAsync(m => m.PersonId == id);
             if (person == null)
@@ -40,7 +40,7 @@ namespace mvc_ef.Controllers
 	
         private bool PersonExists(int id)
         {
-            return _context.Person.Any(e => e.PersonId == id);
+            return _context.People.Any(e => e.PersonId == id);
         }
     }
 }

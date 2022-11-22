@@ -14,106 +14,90 @@ namespace mvc_ef.Models
                     DbContextOptions<SqliteContext>>()))
             {
                 // Look for any movies.
-                if (context.Country.Any())
+                if (context.Countries.Any())
                 {
                     return;   // DB has been seeded
                 }
 
-                context.Country.AddRange(
+                context.Countries.AddRange(
                     new Country
                     {
                         CountryId = 1,
-			Name = "Country1",
+			CountryName = "Country1",
                     },
 
 		    new Country
                     {
 			CountryId = 2,
-			Name = "Country2",
+			CountryName = "Country2",
                     },
 
 		    new Country
                     {
 			CountryId = 3,
-			Name = "Country3",
+			CountryName = "Country3",
                     }
                 );
 
-		context.City.AddRange(
+		context.Cities.AddRange(
                     new City
                     {
                         CityId = 1,
-			Name = "CityA",
+			CityName = "CityA",
 			CountryId = 1,
                     },
 		    new City
 		    {
                         CityId = 2,
-			Name = "CityB",
+			CityName = "CityB",
 			CountryId = 1,
                     },
 		    new City
 		    {
                         CityId = 3,
-			Name = "CityC",
+			CityName = "CityC",
 			CountryId = 2,
                     }
                 );
-		context.Person.AddRange(
+		context.People.AddRange(
                     new Person
                     {
                         PersonId = 1,
-			Name = "PersonA",
+			PersonName = "PersonA",
 			CityId = 1,
                     },
 		    new Person
 		    {
                         PersonId = 2,
-			Name = "PersonB",
+			PersonName = "PersonB",
 			CityId = 1,
                     },
 		    new Person
 		    {
                         PersonId = 3,
-			Name = "PersonC",
+			PersonName = "PersonC",
 			CityId = 2,
                     }
                 );
-		context.Language.AddRange(
+		context.Languages.AddRange(
                     new Language
                     {
                         LanguageId = 1,
-			Name = "LanguageA",
+			LanguageName = "LanguageA",
 		    },
 		    new Language
 		    {
                         LanguageId = 2,
-			Name = "LanguageB",
+			LanguageName = "LanguageB",
                     },
 		    new Language
 		    {
                         LanguageId = 3,
-			Name = "LangaugeC",
+			LanguageName = "LangaugeC",
                     }
                 );
                 context.SaveChanges();
-		// protected override void OnModelCreating(ModelBuilder modelBuilder)
-		// {
-		//     modelBuilder.Entity<Person>().HasData(
-		// 	new Person
-		// 	{
-		// 	    PersonId = 10,
-		// 	    Name = "William",
-		// 	    CityId = 1
-		// 	}
-		//     );
-		//     modelBuilder.Entity<Language>().HasData(
-		// 	new Book { BookId = 1, AuthorId = 1, Title = "Hamlet" },
-		// 	new Book { BookId = 2, AuthorId = 1, Title = "King Lear" },
-		// 	new Book { BookId = 3, AuthorId = 1, Title = "Othello" }
-		//     );
-		}
-            }
-        }
+	    }
+	}
     }
 }

@@ -12,11 +12,11 @@ using mvc_ef.Models;
         {
         }
 
-        public DbSet<mvc_ef.Models.Person> Person { get; set; }
+        public DbSet<mvc_ef.Models.Person> People { get; set; }
 
-        public DbSet<mvc_ef.Models.City> City { get; set; }
+        public DbSet<mvc_ef.Models.City> Cities { get; set; }
 
-        public DbSet<mvc_ef.Models.Country> Country { get; set; }
+        public DbSet<mvc_ef.Models.Country> Countries { get; set; }
 
-        public DbSet<mvc_ef.Models.Language> Language { get; set; }
+        public DbSet<mvc_ef.Models.Language> Languages { get; set; }
     }
