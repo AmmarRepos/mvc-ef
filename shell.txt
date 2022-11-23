@@ -61,63 +61,6 @@ c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Index.cshtml(37,58): error CS
     16 Warning(s)
     66 Error(s)
 Time Elapsed 00:00:02.44
-c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
-c:/Users/Lexicon/Desktop/Repos/mvc-ef $ 
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\PersonLanguageController.cs(29,41): error CS1061: 'SqliteContext' does not contain a definition for 'Person' and no accessible extension method 'Person' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\PersonLanguageController.cs(43,29): error CS1061: 'SqliteContext' does not contain a definition for 'Person' and no accessible extension method 'Person' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\PersonController.cs(25,42): error CS1061: 'SqliteContext' does not contain a definition for 'Person' and no accessible extension method 'Person' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\PersonController.cs(37,41): error CS1061: 'SqliteContext' does not contain a definition for 'Person' and no accessible extension method 'Person' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\PersonController.cs(84,41): error CS1061: 'SqliteContext' does not contain a definition for 'Person' and no accessible extension method 'Person' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\PersonController.cs(138,41): error CS1061: 'SqliteContext' does not contain a definition for 'Person' and no accessible extension method 'Person' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\PersonController.cs(154,41): error CS1061: 'SqliteContext' does not contain a definition for 'Person' and no accessible extension method 'Person' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\PersonController.cs(155,22): error CS1061: 'SqliteContext' does not contain a definition for 'Person' and no accessible extension method 'Person' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\PersonController.cs(168,41): error CS1061: 'SqliteContext' does not contain a definition for 'Person' and no accessible extension method 'Person' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\PersonController.cs(182,29): error CS1061: 'SqliteContext' does not contain a definition for 'Person' and no accessible extension method 'Person' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\LanguageController.cs(24,40): error CS1061: 'SqliteContext' does not contain a definition for 'Language' and no accessible extension method 'Language' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\LanguageController.cs(35,43): error CS1061: 'SqliteContext' does not contain a definition for 'Language' and no accessible extension method 'Language' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\LanguageController.cs(75,43): error CS1061: 'SqliteContext' does not contain a definition for 'Language' and no accessible extension method 'Language' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\LanguageController.cs(126,43): error CS1061: 'SqliteContext' does not contain a definition for 'Language' and no accessible extension method 'Language' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\LanguageController.cs(141,43): error CS1061: 'SqliteContext' does not contain a definition for 'Language' and no accessible extension method 'Language' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\LanguageController.cs(142,22): error CS1061: 'SqliteContext' does not contain a definition for 'Language' and no accessible extension method 'Language' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\LanguageController.cs(149,29): error CS1061: 'SqliteContext' does not contain a definition for 'Language' and no accessible extension method 'Language' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\CityController.cs(24,64): error CS1061: 'City' does not contain a definition for 'Countries' and no accessible extension method 'Countries' accepting a first argument of type 'City' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\CityController.cs(37,33): error CS1061: 'City' does not contain a definition for 'Countries' and no accessible extension method 'Countries' accepting a first argument of type 'City' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\CityController.cs(79,39): error CS1061: 'SqliteContext' does not contain a definition for 'City' and no accessible extension method 'City' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Index.cshtml(16,54): error CS1061: 'Person' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Person' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Index.cshtml(22,59): error CS1061: 'City' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'City' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Index.cshtml(22,54): error CS1061: 'IEnumerable<Person>' does not contain a definition for 'City' and no accessible extension method 'City' accepting a first argument of type 'IEnumerable<Person>' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Index.cshtml(31,53): error CS1061: 'Person' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Person' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Index.cshtml(37,58): error CS1061: 'City' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'City' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\CityController.cs(132,39): error CS1061: 'SqliteContext' does not contain a definition for 'City' and no accessible extension method 'City' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\CityController.cs(148,39): error CS1061: 'SqliteContext' does not contain a definition for 'City' and no accessible extension method 'City' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\CityController.cs(149,22): error CS1061: 'SqliteContext' does not contain a definition for 'City' and no accessible extension method 'City' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\CityController.cs(156,29): error CS1061: 'SqliteContext' does not contain a definition for 'City' and no accessible extension method 'City' accepting a first argument of type 'SqliteContext' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Edit.cshtml(17,135): error CS1061: 'Person' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Person' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Edit.cshtml(18,135): error CS1061: 'Person' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Person' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Edit.cshtml(19,147): error CS1061: 'Person' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Person' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\City\Delete.cshtml(18,46): error CS1061: 'City' does not contain a definition for 'CityxoName' and no accessible extension method 'CityxoName' accepting a first argument of type 'City' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Details.cshtml(14,50): error CS1061: 'Person' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Person' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Details.cshtml(17,46): error CS1061: 'Person' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Person' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Delete.cshtml(15,50): error CS1061: 'Person' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Person' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Delete.cshtml(18,46): error CS1061: 'Person' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Person' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Create.cshtml(16,135): error CS1061: 'Person' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Person' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Create.cshtml(17,135): error CS1061: 'Person' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Person' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Create.cshtml(18,147): error CS1061: 'Person' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Person' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\PersonLanguage\Language.cshtml(14,50): error CS1061: 'Person' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Person' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\PersonLanguage\Language.cshtml(17,46): error CS1061: 'Person' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Person' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\PersonLanguage\Language.cshtml(25,39): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Index.cshtml(16,54): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Index.cshtml(25,53): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Edit.cshtml(17,135): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Edit.cshtml(18,135): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Edit.cshtml(19,147): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Details.cshtml(14,50): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Details.cshtml(17,46): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Delete.cshtml(15,50): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Delete.cshtml(18,46): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Create.cshtml(16,135): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Create.cshtml(17,135): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Create.cshtml(18,147): error CS1061: 'Language' does not contain a definition for 'Name' and no accessible extension method 'Name' accepting a first argument of type 'Language' could be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
     16 Warning(s)
     55 Error(s)
 
@@ -241,30 +184,7 @@ c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Language\Delete.cshtml(15,50): error
 Time Elapsed 00:00:02.29
 c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
 MSBuild version 17.3.2+561848881 for .NET
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\Person.cs(8,23): warning CS8618: Non-nullable property 'PersonName' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\Person.cs(15,39): warning CS8618: Non-nullable property 'Languages' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\Langauge.cs(8,23): warning CS8618: Non-nullable property 'LanguageName' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\Langauge.cs(10,37): warning CS8618: Non-nullable property 'People' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\Country.cs(8,23): warning CS8618: Non-nullable property 'CountryName' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\Country.cs(11,27): warning CS8618: Non-nullable property 'Cities' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\City.cs(9,23): warning CS8618: Non-nullable property 'CityName' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\City.cs(13,17): warning CS8618: Non-nullable property 'Country' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\PersonController.cs(155,36): warning CS8604: Possible null reference argument for parameter 'entity' in 'EntityEntry<Person> DbSet<Person>.Remove(Person entity)'. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\LanguageController.cs(142,39): warning CS8604: Possible null reference argument for parameter 'entity' in 'EntityEntry<Language> DbSet<Language>.Remove(Language entity)'. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Data\SqliteContext.cs(10,16): warning CS8618: Non-nullable property 'People' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Data\SqliteContext.cs(10,16): warning CS8618: Non-nullable property 'Cities' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Data\SqliteContext.cs(10,16): warning CS8618: Non-nullable property 'Countries' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Data\SqliteContext.cs(10,16): warning CS8618: Non-nullable property 'Languages' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\CountryController.cs(142,39): warning CS8604: Possible null reference argument for parameter 'entity' in 'EntityEntry<Country> DbSet<Country>.Remove(Country entity)'. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\CityController.cs(149,36): warning CS8604: Possible null reference argument for parameter 'entity' in 'EntityEntry<City> DbSet<City>.Remove(City entity)'. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Index.cshtml(22,48): warning CS8602: Dereference of a possibly null reference. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Index.cshtml(34,48): warning CS8602: Dereference of a possibly null reference. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Index.cshtml(37,48): warning CS8602: Dereference of a possibly null reference. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Details.cshtml(23,40): warning CS8602: Dereference of a possibly null reference. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Delete.cshtml(24,40): warning CS8602: Dereference of a possibly null reference. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
-
 Build succeeded.
-
 c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\Person.cs(8,23): warning CS8618: Non-nullable property 'PersonName' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
 c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\Person.cs(15,39): warning CS8618: Non-nullable property 'Languages' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
 c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\Langauge.cs(8,23): warning CS8618: Non-nullable property 'LanguageName' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
@@ -850,3 +770,661 @@ info: Microsoft.EntityFrameworkCore.Database.Command[20101]
       INNER JOIN "Cities" AS "c" ON "p"."CityId" = "c"."CityId"
 interrupt
 c:/Users/Lexicon/Desktop/Repos/mvc-ef $ exit
+Welcome to the Emacs shell
+
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet run
+Building...
+Unhandled exception: System.ComponentModel.Win32Exception (2): An error occurred trying to start process 'c:\Users\Lexicon\Desktop\Repos\mvc-ef\bin\Debug\net6.0\mvc-ef.exe' with working directory //Debug folder has been deleted
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet run
+Building...
+interrupt
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ Welcome to the Emacs shell
+
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build
+
+MSBuild version 17.3.2+561848881 for .NET
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+
+Build FAILED.
+
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(100,3): error CS0103: The name 'modelbuilder' does not exist in the current context [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+    24 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:04.60
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+
+MSBuild version 17.3.2+561848881 for .NET
+
+Build FAILED.
+
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(99,39): error CS1513: } expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(110,5): error CS1022: Type or namespace definition, or end-of-file expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(111,1): error CS1022: Type or namespace definition, or end-of-file expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+    0 Warning(s)
+    3 Error(s)
+
+Time Elapsed 00:00:01.22
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+
+MSBuild version 17.3.2+561848881 for .NET
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(99,38): error CS1002: ; expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(100,9): error CS1513: } expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(111,1): error CS1022: Type or namespace definition, or end-of-file expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+
+Build FAILED.
+
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(99,38): error CS1002: ; expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(100,9): error CS1513: } expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(111,1): error CS1022: Type or namespace definition, or end-of-file expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+    0 Warning(s)
+    3 Error(s)
+
+Time Elapsed 00:00:01.20
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+
+MSBuild version 17.3.2+561848881 for .NET
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(100,8): error CS1513: } expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(111,1): error CS1022: Type or namespace definition, or end-of-file expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+
+Build FAILED.
+
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(100,8): error CS1513: } expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(111,1): error CS1022: Type or namespace definition, or end-of-file expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+    0 Warning(s)
+    2 Error(s)
+
+Time Elapsed 00:00:01.23
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+MSBuild version 17.3.2+561848881 for .NET
+Build FAILED.
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(102,30): error CS0708: 'OnModelCreating': cannot declare instance members in a static class [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(102,30): error CS0115: 'SeedData.OnModelCreating(ModelBuilder)': no suitable method found to override [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(102,30): error CS1057: 'SeedData.OnModelCreating(ModelBuilder)': static classes cannot contain protected members [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+    0 Warning(s)
+    3 Error(s)
+
+Time Elapsed 00:00:01.97
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+MSBuild version 17.3.2+561848881 for .NET
+    24 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:02.72
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+MSBuild version 17.3.2+561848881 for .NET
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(11,33): error CS0115: 'SeedEntities.OnModelCreating(ModelBuilder)': no suitable method found to override [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+
+Build FAILED.
+
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(11,33): error CS0115: 'SeedEntities.OnModelCreating(ModelBuilder)': no suitable method found to override [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+    0 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:03.55
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+MSBuild version 17.3.2+561848881 for .NET
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(11,33): error CS0115: 'SeedEntities.OnModelCreating(ModelBuilder)': no suitable method found to override [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+
+Build FAILED.
+
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(11,33): error CS0115: 'SeedEntities.OnModelCreating(ModelBuilder)': no suitable method found to override [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+    0 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:03.76
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+MSBuild version 17.3.2+561848881 for .NET
+
+Build FAILED.
+
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(10,6): error CS1513: } expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(13,8): error CS1002: ; expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(13,21): error CS8124: Tuple must contain at least two elements. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(13,21): error CS1026: ) expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(13,21): error CS1022: Type or namespace definition, or end-of-file expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,38): error CS1001: Identifier expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,38): error CS1003: Syntax error, ',' expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,39): error CS8124: Tuple must contain at least two elements. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,40): error CS1001: Identifier expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,41): error CS1002: ; expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,41): error CS1022: Type or namespace definition, or end-of-file expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(27,5): error CS1022: Type or namespace definition, or end-of-file expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(28,1): error CS1022: Type or namespace definition, or end-of-file expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+    0 Warning(s)
+    13 Error(s)
+
+Time Elapsed 00:00:02.99
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+MSBuild version 17.3.2+561848881 for .NET
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(10,6): error CS1513: } expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(13,8): error CS1002: ; expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(13,21): error CS8124: Tuple must contain at least two elements. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(13,21): error CS1026: ) expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(13,21): error CS1022: Type or namespace definition, or end-of-file expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,38): error CS1001: Identifier expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,38): error CS1003: Syntax error, ',' expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,39): error CS8124: Tuple must contain at least two elements. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,40): error CS1001: Identifier expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,41): error CS1002: ; expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,41): error CS1022: Type or namespace definition, or end-of-file expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(27,5): error CS1022: Type or namespace definition, or end-of-file expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(28,1): error CS1022: Type or namespace definition, or end-of-file expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+
+Build FAILED.
+
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(10,6): error CS1513: } expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(13,8): error CS1002: ; expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(13,21): error CS8124: Tuple must contain at least two elements. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(13,21): error CS1026: ) expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(13,21): error CS1022: Type or namespace definition, or end-of-file expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,38): error CS1001: Identifier expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,38): error CS1003: Syntax error, ',' expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,39): error CS8124: Tuple must contain at least two elements. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,40): error CS1001: Identifier expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,41): error CS1002: ; expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,41): error CS1022: Type or namespace definition, or end-of-file expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(27,5): error CS1022: Type or namespace definition, or end-of-file expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(28,1): error CS1022: Type or namespace definition, or end-of-file expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+    0 Warning(s)
+    13 Error(s)
+
+Time Elapsed 00:00:03.17
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+MSBuild version 17.3.2+561848881 for .NET
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(13,8): error CS1002: ; expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(13,21): error CS8124: Tuple must contain at least two elements. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(13,21): error CS1026: ) expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(13,21): error CS1022: Type or namespace definition, or end-of-file expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,38): error CS1001: Identifier expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,38): error CS1003: Syntax error, ',' expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,39): error CS8124: Tuple must contain at least two elements. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,40): error CS1001: Identifier expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,41): error CS1002: ; expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,41): error CS1022: Type or namespace definition, or end-of-file expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(27,5): error CS1022: Type or namespace definition, or end-of-file expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(28,1): error CS1022: Type or namespace definition, or end-of-file expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+
+Build FAILED.
+
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(13,8): error CS1002: ; expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(13,21): error CS8124: Tuple must contain at least two elements. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(13,21): error CS1026: ) expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(13,21): error CS1022: Type or namespace definition, or end-of-file expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,38): error CS1001: Identifier expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,38): error CS1003: Syntax error, ',' expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,39): error CS8124: Tuple must contain at least two elements. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,40): error CS1001: Identifier expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,41): error CS1002: ; expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,41): error CS1022: Type or namespace definition, or end-of-file expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(27,5): error CS1022: Type or namespace definition, or end-of-file expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(28,1): error CS1022: Type or namespace definition, or end-of-file expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+    0 Warning(s)
+    12 Error(s)
+
+Time Elapsed 00:00:01.28
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+MSBuild version 17.3.2+561848881 for .NET
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(24,2): error CS1513: } expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+
+Build FAILED.
+
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(24,2): error CS1513: } expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+    0 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:01.80
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+MSBuild version 17.3.2+561848881 for .NET
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(102,6): error CS0708: 'SeedData.context': cannot declare instance members in a static class [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(106,26): error CS0246: The type or namespace name 'context' could not be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(106,34): error CS0106: The modifier 'protected' is not valid for this item [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(106,34): error CS0106: The modifier 'override' is not valid for this item [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(102,2): error CS0825: The contextual keyword 'var' may only appear within a local variable declaration or in script code [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(106,26): error CS0538: 'context' in explicit interface declaration is not an interface [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(106,34): error CS0708: 'context.OnModelCreating': cannot declare instance members in a static class [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+
+Build FAILED.
+
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(102,6): error CS0708: 'SeedData.context': cannot declare instance members in a static class [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(106,26): error CS0246: The type or namespace name 'context' could not be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(106,34): error CS0106: The modifier 'protected' is not valid for this item [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(106,34): error CS0106: The modifier 'override' is not valid for this item [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(102,2): error CS0825: The contextual keyword 'var' may only appear within a local variable declaration or in script code [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(106,26): error CS0538: 'context' in explicit interface declaration is not an interface [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(106,34): error CS0708: 'context.OnModelCreating': cannot declare instance members in a static class [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+    0 Warning(s)
+    7 Error(s)
+
+Time Elapsed 00:00:03.21
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+MSBuild version 17.3.2+561848881 for .NET
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(5,20): error CS1002: ; expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+
+Build FAILED.
+
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(5,20): error CS1002: ; expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+    0 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:01.23
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+MSBuild version 17.3.2+561848881 for .NET
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,26): error CS0246: The type or namespace name 'context' could not be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,34): error CS0106: The modifier 'protected' is not valid for this item [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,34): error CS0106: The modifier 'override' is not valid for this item [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(11,2): error CS0825: The contextual keyword 'var' may only appear within a local variable declaration or in script code [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,26): error CS0538: 'context' in explicit interface declaration is not an interface [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+
+Build FAILED.
+
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,26): error CS0246: The type or namespace name 'context' could not be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,34): error CS0106: The modifier 'protected' is not valid for this item [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,34): error CS0106: The modifier 'override' is not valid for this item [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(11,2): error CS0825: The contextual keyword 'var' may only appear within a local variable declaration or in script code [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,26): error CS0538: 'context' in explicit interface declaration is not an interface [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+    0 Warning(s)
+    5 Error(s)
+
+Time Elapsed 00:00:01.76
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+MSBuild version 17.3.2+561848881 for .NET
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,26): error CS0115: 'SeedEntities.OnModelCreating(ModelBuilder)': no suitable method found to override [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(11,2): error CS0825: The contextual keyword 'var' may only appear within a local variable declaration or in script code [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+
+Build FAILED.
+
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,26): error CS0115: 'SeedEntities.OnModelCreating(ModelBuilder)': no suitable method found to override [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(11,2): error CS0825: The contextual keyword 'var' may only appear within a local variable declaration or in script code [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+    0 Warning(s)
+    2 Error(s)
+
+Time Elapsed 00:00:01.79
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+MSBuild version 17.3.2+561848881 for .NET
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,26): error CS0115: 'SeedEntities.OnModelCreating(ModelBuilder)': no suitable method found to override [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+
+Build FAILED.
+
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,26): error CS0115: 'SeedEntities.OnModelCreating(ModelBuilder)': no suitable method found to override [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+    0 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:01.70
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+MSBuild version 17.3.2+561848881 for .NET
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,26): error CS0115: 'SeedEntities.OnModelCreating(ModelBuilder)': no suitable method found to override [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+
+Build FAILED.
+
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,26): error CS0115: 'SeedEntities.OnModelCreating(ModelBuilder)': no suitable method found to override [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+    0 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:01.91
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+MSBuild version 17.3.2+561848881 for .NET
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,26): error CS0115: 'SeedEntities.OnModelCreating(ModelBuilder)': no suitable method found to override [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+
+Build FAILED.
+
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,26): error CS0115: 'SeedEntities.OnModelCreating(ModelBuilder)': no suitable method found to override [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+    0 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:01.71
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+MSBuild version 17.3.2+561848881 for .NET
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,26): error CS0246: The type or namespace name 'context' could not be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,34): error CS0106: The modifier 'protected' is not valid for this item [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,34): error CS0106: The modifier 'override' is not valid for this item [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,26): error CS0538: 'context' in explicit interface declaration is not an interface [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+
+Build FAILED.
+
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,26): error CS0246: The type or namespace name 'context' could not be found (are you missing a using directive or an assembly reference?) [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,34): error CS0106: The modifier 'protected' is not valid for this item [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,34): error CS0106: The modifier 'override' is not valid for this item [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,26): error CS0538: 'context' in explicit interface declaration is not an interface [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+    0 Warning(s)
+    4 Error(s)
+
+Time Elapsed 00:00:01.85
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+MSBuild version 17.3.2+561848881 for .NET
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,40): error CS0106: The modifier 'protected' is not valid for this item [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,40): error CS0106: The modifier 'override' is not valid for this item [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,26): error CS0538: 'SqliteContext' in explicit interface declaration is not an interface [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+
+Build FAILED.
+
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,40): error CS0106: The modifier 'protected' is not valid for this item [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,40): error CS0106: The modifier 'override' is not valid for this item [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedEntities.cs(15,26): error CS0538: 'SqliteContext' in explicit interface declaration is not an interface [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+    0 Warning(s)
+    3 Error(s)
+
+Time Elapsed 00:00:01.76
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+MSBuild version 17.3.2+561848881 for .NET
+
+Build succeeded.
+
+    24 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:04.79
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+MSBuild version 17.3.2+561848881 for .NET
+Build FAILED.
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(101,20): error CS0122: 'SqliteContext.OnModelCreating(ModelBuilder)' is inaccessible due to its protection level [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+    24 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:02.11
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+MSBuild version 17.3.2+561848881 for .NET
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Data\SqliteContext.cs(23,26): error CS0507: 'SqliteContext.OnModelCreating(ModelBuilder)': cannot change access modifiers when overriding 'protected internal' inherited member 'DbContext.OnModelCreating(ModelBuilder)' [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+
+Build FAILED.
+
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Data\SqliteContext.cs(23,26): error CS0507: 'SqliteContext.OnModelCreating(ModelBuilder)': cannot change access modifiers when overriding 'protected internal' inherited member 'DbContext.OnModelCreating(ModelBuilder)' [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+    0 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:01.65
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+MSBuild version 17.3.2+561848881 for .NET
+
+Build FAILED.
+
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(101,6): error CS0120: An object reference is required for the non-static field, method, or property 'SqliteContext.OnModelCreatingS()' [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Data\SqliteContext.cs(33,2): error CS7036: There is no argument given that corresponds to the required formal parameter 'modelbuilder' of 'SqliteContext.OnModelCreating(ModelBuilder)' [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+    24 Warning(s)
+    2 Error(s)
+
+Time Elapsed 00:00:03.82
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+MSBuild version 17.3.2+561848881 for .NET
+
+Build FAILED.
+
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(101,20): error CS7036: There is no argument given that corresponds to the required formal parameter 'test' of 'SqliteContext.OnModelCreatingS(ModelBuilder)' [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+    24 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:04.23
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+MSBuild version 17.3.2+561848881 for .NET
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Data\SqliteContext.cs(33,46): error CS1526: A new expression requires an argument list or (), [], or {} after type [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+
+Build FAILED.
+
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Data\SqliteContext.cs(33,46): error CS1526: A new expression requires an argument list or (), [], or {} after type [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+    0 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:01.22
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+MSBuild version 17.3.2+561848881 for .NET
+
+Build FAILED.
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(101,6): error CS0120: An object reference is required for the non-static field, method, or property 'SqliteContext.OnModelCreatingS()' [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+    24 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:02.03
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+MSBuild version 17.3.2+561848881 for .NET
+
+Build succeeded.
+
+    24 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:04.90
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+MSBuild version 17.3.2+561848881 for .NET
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.24
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet  run
+Building...
+Unhandled exception. System.InvalidOperationException: The seed entity for entity type 'LanguagePerson (Dictionary<string, object>)' cannot be added because no value was provided for the required property 'LanguagesLanguageId'.
+   at mvc_ef.Models.SeedData.Initialize(IServiceProvider serviceProvider) in c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs:line 17
+   at Program.<Main>$(String[] args) in c:\Users\Lexicon\Desktop\Repos\mvc-ef\Program.cs:line 27
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet run
+Building...
+Unhandled exception. System.InvalidOperationException: The seed entity for entity type 'LanguagePerson (Dictionary<string, object>)' cannot be added because no value was provided for the required property 'LanguagesLanguageId'.
+   at mvc_ef.Models.SeedData.Initialize(IServiceProvider serviceProvider) in c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs:line 17
+   at Program.<Main>$(String[] args) in c:\Users\Lexicon\Desktop\Repos\mvc-ef\Program.cs:line 27
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet run
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet run
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet run
+Building...
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Data\SqliteContext.cs(10,12): warning CS8618: Non-nullable property 'People' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Data\SqliteContext.cs(10,12): warning CS8618: Non-nullable property 'Cities' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Data\SqliteContext.cs(10,12): warning CS8618: Non-nullable property 'Countries' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Data\SqliteContext.cs(10,12): warning CS8618: Non-nullable property 'Languages' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\Person.cs(8,23): warning CS8618: Non-nullable property 'PersonName' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\Person.cs(15,39): warning CS8618: Non-nullable property 'Languages' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\Langauge.cs(8,23): warning CS8618: Non-nullable property 'LanguageName' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\Langauge.cs(10,37): warning CS8618: Non-nullable property 'People' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\Country.cs(9,23): warning CS8618: Non-nullable property 'CountryName' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\Country.cs(12,27): warning CS8618: Non-nullable property 'Cities' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\City.cs(9,23): warning CS8618: Non-nullable property 'CityName' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\City.cs(13,17): warning CS8618: Non-nullable property 'Country' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\PersonController.cs(25,90): warning CS8602: Dereference of a possibly null reference. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\PersonController.cs(155,36): warning CS8604: Possible null reference argument for parameter 'entity' in 'EntityEntry<Person> DbSet<Person>.Remove(Person entity)'. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\LanguageController.cs(142,39): warning CS8604: Possible null reference argument for parameter 'entity' in 'EntityEntry<Language> DbSet<Language>.Remove(Language entity)'. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Index.cshtml(22,48): warning CS8602: Dereference of a possibly null reference. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Index.cshtml(25,48): warning CS8602: Dereference of a possibly null reference. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Index.cshtml(37,48): warning CS8602: Dereference of a possibly null reference. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Index.cshtml(40,48): warning CS8602: Dereference of a possibly null reference. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Index.cshtml(43,48): warning CS8602: Dereference of a possibly null reference. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\CountryController.cs(142,39): warning CS8604: Possible null reference argument for parameter 'entity' in 'EntityEntry<Country> DbSet<Country>.Remove(Country entity)'. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\CityController.cs(149,36): warning CS8604: Possible null reference argument for parameter 'entity' in 'EntityEntry<City> DbSet<City>.Remove(City entity)'. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Details.cshtml(23,40): warning CS8602: Dereference of a possibly null reference. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Views\Person\Delete.cshtml(24,40): warning CS8602: Dereference of a possibly null reference. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Countries" AS "c")
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 8)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Countries" ("CountryId", "CountryName")
+      VALUES (@p0, @p1);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 8)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Countries" ("CountryId", "CountryName")
+      VALUES (@p0, @p1);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 8)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Countries" ("CountryId", "CountryName")
+      VALUES (@p0, @p1);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 9)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Languages" ("LanguageId", "LanguageName")
+      VALUES (@p0, @p1);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 9)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Languages" ("LanguageId", "LanguageName")
+      VALUES (@p0, @p1);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 9)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Languages" ("LanguageId", "LanguageName")
+      VALUES (@p0, @p1);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p2='?' (DbType = Int32), @p3='?' (Size = 5), @p4='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Cities" ("CityId", "CityName", "CountryId")
+      VALUES (@p2, @p3, @p4);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 5), @p2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Cities" ("CityId", "CityName", "CountryId")
+      VALUES (@p0, @p1, @p2);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 5), @p2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Cities" ("CityId", "CityName", "CountryId")
+      VALUES (@p0, @p1, @p2);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (Size = 7)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "People" ("PersonId", "CityId", "PersonName")
+      VALUES (@p3, @p4, @p5);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (Size = 7)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "People" ("PersonId", "CityId", "PersonName")
+      VALUES (@p0, @p1, @p2);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (Size = 7)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "People" ("PersonId", "CityId", "PersonName")
+      VALUES (@p0, @p1, @p2);
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: https://localhost:7223
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5193
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: c:\Users\Lexicon\Desktop\Repos\mvc-ef\
+interrupt
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+MSBuild version 17.3.2+561848881 for .NET
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(99,39): error CS1513: } expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(112,5): error CS1022: Type or namespace definition, or end-of-file expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(113,1): error CS1022: Type or namespace definition, or end-of-file expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+
+Build FAILED.
+
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(99,39): error CS1513: } expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(112,5): error CS1022: Type or namespace definition, or end-of-file expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(113,1): error CS1022: Type or namespace definition, or end-of-file expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+    0 Warning(s)
+    3 Error(s)
+
+Time Elapsed 00:00:01.22
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build -v:q
+MSBuild version 17.3.2+561848881 for .NET
+
+Build succeeded.
+
+    24 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:02.30
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet run
+Building...
+Unhandled exception. System.InvalidOperationException: The seed entity for entity type 'LanguagePerson (Dictionary<string, object>)' cannot be added because no value was provided for the required property 'LanguagesLanguageId'.
+   at mvc_ef.Models.SeedData.Initialize(IServiceProvider serviceProvider) in c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs:line 17
+   at Program.<Main>$(String[] args) in c:\Users\Lexicon\Desktop\Repos\mvc-ef\Program.cs:line 27
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build
+MSBuild version 17.3.2+561848881 for .NET
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+
+Build succeeded.
+
+    24 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:02.18
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet run
+Building...
+Unhandled exception. System.InvalidOperationException: The seed entity for entity type 'LanguagePerson (Dictionary<string, object>)' cannot be added because no value was provided for the required property 'LanguagesLanguageId'.
+   at mvc_ef.Models.SeedData.Initialize(IServiceProvider serviceProvider) in c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs:line 17
+   at Program.<Main>$(String[] args) in c:\Users\Lexicon\Desktop\Repos\mvc-ef\Program.cs:line 27
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build
+MSBuild version 17.3.2+561848881 for .NET
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(104,6): error CS1513: } expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(113,33): error CS1519: Invalid token '(' in class, record, struct, or interface member declaration [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(113,34): error CS8124: Tuple must contain at least two elements. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(113,35): error CS1519: Invalid token ';' in class, record, struct, or interface member declaration [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(116,5): error CS1022: Type or namespace definition, or end-of-file expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(117,1): error CS1022: Type or namespace definition, or end-of-file expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+
+Build FAILED.
+
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(104,6): error CS1513: } expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(113,33): error CS1519: Invalid token '(' in class, record, struct, or interface member declaration [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(113,34): error CS8124: Tuple must contain at least two elements. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(113,35): error CS1519: Invalid token ';' in class, record, struct, or interface member declaration [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(116,5): error CS1022: Type or namespace definition, or end-of-file expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(117,1): error CS1022: Type or namespace definition, or end-of-file expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+    0 Warning(s)
+    6 Error(s)
+
+Time Elapsed 00:00:01.22
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build
+MSBuild version 17.3.2+561848881 for .NET
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(103,2): error CS1513: } expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+
+Build FAILED.
+
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(103,2): error CS1513: } expected [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+    0 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:01.22
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build
+MSBuild version 17.3.2+561848881 for .NET
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+
+Build FAILED.
+
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs(100,11): error CS0122: 'SqliteContext.OnModelCreating(ModelBuilder)' is inaccessible due to its protection level [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+    24 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:02.11
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet build
+MSBuild version 17.3.2+561848881 for .NET
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+Build succeeded.
+
+    24 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:02.25
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet run
+Building...
+Unhandled exception. System.InvalidOperationException: The seed entity for entity type 'LanguagePerson (Dictionary<string, object>)' cannot be added because no value was provided for the required property 'LanguagesLanguageId'.
+   at mvc_ef.Models.SeedData.Initialize(IServiceProvider serviceProvider) in c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs:line 17
+   at Program.<Main>$(String[] args) in c:\Users\Lexicon\Desktop\Repos\mvc-ef\Program.cs:line 27
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet run
+Building...
+Unhandled exception. System.InvalidOperationException: The seed entity for entity type 'LanguagePerson (Dictionary<string, object>)' cannot be added because no value was provided for the required property 'LanguagesLanguageId'.
+   at mvc_ef.Models.SeedData.Initialize(IServiceProvider serviceProvider) in c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs:line 17
+   at Program.<Main>$(String[] args) in c:\Users\Lexicon\Desktop\Repos\mvc-ef\Program.cs:line 27
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet run
+Building...
+Unhandled exception. System.InvalidOperationException: The seed entity for entity type 'LanguagePerson (Dictionary<string, object>)' cannot be added because no value was provided for the required property 'LanguagesLanguageId'.
+   at mvc_ef.Models.SeedData.Initialize(IServiceProvider serviceProvider) in c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs:line 17
+   at Program.<Main>$(String[] args) in c:\Users\Lexicon\Desktop\Repos\mvc-ef\Program.cs:line 27
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet run
+Building...
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet run
+Building...
+Unhandled exception. System.NullReferenceException: Object reference not set to an instance of an object.
+   at Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder..ctor(IMutableEntityType entityType)
+   at Microsoft.EntityFrameworkCore.Metadata.Builders.CollectionCollectionBuilder`2.UsingEntity(Action`1 configureJoinEntityType)
+   at SqliteContext.OnModelCreating(ModelBuilder modelbuilder) in c:\Users\Lexicon\Desktop\Repos\mvc-ef\Data\SqliteContext.cs:line 26
+   at SqliteContext.OnModelCreatingUnprotected() in c:\Users\Lexicon\Desktop\Repos\mvc-ef\Data\SqliteContext.cs:line 34
+   at mvc_ef.Models.SeedData.Initialize(IServiceProvider serviceProvider) in c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\SeedData.cs:line 100
+   at Program.<Main>$(String[] args) in c:\Users\Lexicon\Desktop\Repos\mvc-ef\Program.cs:line 27
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ 
