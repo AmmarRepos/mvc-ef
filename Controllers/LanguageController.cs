@@ -53,7 +53,7 @@ namespace mvc_ef.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("LanguageId,Name")] Language language)
+        public async Task<IActionResult> Create([Bind("LanguageId,LanguageName")] Language language)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace mvc_ef.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("LanguageId,Name")] Language language)
+        public async Task<IActionResult> Edit(int id, [Bind("LanguageId,LanguageName")] Language language)
         {
             if (id != language.LanguageId)
             {

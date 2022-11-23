@@ -22,7 +22,7 @@ namespace mvc_ef.Controllers
         // GET: Person
         public async Task<IActionResult> Index()
         {
-            var sqliteContext = _context.People.Include(p => p.City);
+            var sqliteContext = _context.People.Include(p => p.City).ThenInclude(city => city.Country);
             return View(await sqliteContext.ToListAsync());
         }
 
@@ -57,7 +57,7 @@ namespace mvc_ef.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PersonId,Name,CityId")] Person person)
+        public async Task<IActionResult> Create([Bind("PersonId,PersonName,CityId")] Person person)
         {
 	    
 	    Random rnd = new Random();
@@ -95,7 +95,7 @@ namespace mvc_ef.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("PersonId,Name,CityId")] Person person)
+        public async Task<IActionResult> Edit(int id, [Bind("PersonId,PersonName,CityId")] Person person)
         {
             if (id != person.PersonId)
             {
