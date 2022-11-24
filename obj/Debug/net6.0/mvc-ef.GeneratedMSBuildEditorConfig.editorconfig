@@ -8,121 +8,121 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = mvc_ef
 build_property.RootNamespace = mvc_ef
-build_property.ProjectDir = c:\Users\Lexicon\Desktop\Repos\mvc-ef\
+build_property.ProjectDir = C:\Users\Lexicon\Desktop\Repos\mvc-ef\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = c:\Users\Lexicon\Desktop\Repos\mvc-ef
+build_property.MSBuildProjectDirectory = C:\Users\Lexicon\Desktop\Repos\mvc-ef
 build_property._RazorSourceGeneratorDebug = 
 
-[c:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/City/Create.cshtml]
+[C:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/City/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0eVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/City/Delete.cshtml]
+[C:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/City/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0eVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/City/Details.cshtml]
+[C:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/City/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0eVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/City/Edit.cshtml]
+[C:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/City/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0eVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/City/Index.cshtml]
+[C:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/City/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0eVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/Country/Create.cshtml]
+[C:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/Country/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRyeVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/Country/Delete.cshtml]
+[C:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/Country/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRyeVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/Country/Details.cshtml]
+[C:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/Country/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRyeVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/Country/Edit.cshtml]
+[C:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/Country/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRyeVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/Country/Index.cshtml]
+[C:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/Country/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRyeVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/Home/Index.cshtml]
+[C:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/Home/Privacy.cshtml]
+[C:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/Language/Create.cshtml]
+[C:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/Language/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFuZ3VhZ2VcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/Language/Delete.cshtml]
+[C:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/Language/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFuZ3VhZ2VcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/Language/Details.cshtml]
+[C:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/Language/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFuZ3VhZ2VcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/Language/Edit.cshtml]
+[C:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/Language/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFuZ3VhZ2VcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/Language/Index.cshtml]
+[C:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/Language/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFuZ3VhZ2VcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/PersonLanguage/Language.cshtml]
+[C:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/PersonLanguage/Language.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uTGFuZ3VhZ2VcTGFuZ3VhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/Person/Create.cshtml]
+[C:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/Person/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/Person/Delete.cshtml]
+[C:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/Person/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/Person/Details.cshtml]
+[C:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/Person/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/Person/Edit.cshtml]
+[C:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/Person/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/Person/Index.cshtml]
+[C:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/Person/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/Shared/Error.cshtml]
+[C:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/_ViewImports.cshtml]
+[C:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/_ViewStart.cshtml]
+[C:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/Shared/_Layout.cshtml]
+[C:/Users/Lexicon/Desktop/Repos/mvc-ef/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-5z1ywvvkf7
