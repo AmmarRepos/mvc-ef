@@ -80,13 +80,13 @@ namespace mvc_ef.Controllers
             {
                 return NotFound();
             }
-
+	    // var person = await _context.People.Include(p => p.City);
             var person = await _context.People.FindAsync(id);
             if (person == null)
             {
                 return NotFound();
             }
-            ViewData["CityId"] = new SelectList(_context.Set<City>(), "CityId", "CityId", person.CityId);
+	    ViewData["CityId"] = new SelectList(_context.Set<City>(), "CityId", "CityId", person.CityId);
             return View(person);
         }
 

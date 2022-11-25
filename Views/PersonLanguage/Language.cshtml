@@ -4,7 +4,7 @@
     ViewData["Title"] = "Languages";
 }
 
-<h1>Langauges</h1>
+<h1>@Model.PersonName</h1>
 
 <div>
     <h4>Person</h4>
@@ -30,5 +30,6 @@
 </div>
 <div>
     <a asp-action="Edit" asp-route-id="@Model.PersonId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-controller="Person" asp-action="Index">Back to People</a>
+
 </div>

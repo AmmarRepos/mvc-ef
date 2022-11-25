@@ -4,8 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using mvc_ef.Models;
-using System.Data.Entity.ModelConfiguration.Conventions;
-//using System.Data.Entity.Core.Metadata.Edm;
+// using System.Data.Entity.ModelConfiguration.Conventions;
+// using System.Data.Entity.Core.Metadata.Edm;
 
 public class SqliteContext : DbContext
 {
@@ -34,18 +34,18 @@ public class SqliteContext : DbContext
     public void OnModelCreatingUnprotected()
     {
 	ModelBuilder modelbuilder = new ModelBuilder();
-	modelBuilder.Conventions.Add<PKConvention>();
+	// modelBuilder.Conventions.Add<PKConvention>();
 	OnModelCreating(modelbuilder);
     }
 
-    public class PKConvention : Convention
-    {
-	public PKConvention()
-	{
-	    modelbuilder.Entity<Person>()
-		.HasMany(p => p.Languages)
-		.WithMany(c => c.People)
-		.UsingEntity(j => j.HasData(new { PeoplePersonId = 1, LanguagesLanguageId = 1 }));
-	}
-    }
+//     public class PKConvention : Convention
+//     {
+// 	public PKConvention()
+// 	{
+// 	    modelbuilder.Entity<Person>()
+// 		.HasMany(p => p.Languages)
+// 		.WithMany(c => c.People)
+// 		.UsingEntity(j => j.HasData(new { PeoplePersonId = 1, LanguagesLanguageId = 1 }));
+// 	}
+//     }
 }
