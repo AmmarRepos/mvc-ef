@@ -1,35 +1,39 @@
 @model mvc_ef.Models.Person
 
-@{
-    ViewData["Title"] = "Languages";
-}
+    @{
+	ViewData["Title"] = "Languages";
+    }
 
-<h1>@Model.PersonName</h1>
+    <h1>@Model.PersonName</h1>
 
-<div>
-    <h4>Person</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.PersonName)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.PersonName)
-        </dd>
-	<dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Languages)
-        </dt>
-	<dd><ol>
-	@foreach (var item in Model.Languages) {
-            <li class = "col-sm-10">
-		@Html.DisplayFor(modelItem => item.LanguageName)
-            </li>
+    <p>
+	<a asp-action="Create">Add Langauge</a>
+    </p>
+    <table class="table">
+	<thead>
+            <tr>
+		<th>
+                    @Html.DisplayNameFor(model => model.Languages)
+		</th>
+		<th>
+
+		</th>
+		</th>
+            </tr>
+	</thead>
+	<tbody>
+	    @foreach (var item in Model.Languages)
+	    {
+		<tr>
+		<td>
+	    	@Html.DisplayFor(modelItem => item.LanguageName)
+		</td>
+		<td>
+                    <a asp-action="Edit" asp-route-id="@item.LanguageId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.LanguageId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.LanguageId">Delete</a> |
+		</td>
+            </tr>
 	    }
-	</ol></dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.PersonId">Edit</a> |
-    <a asp-controller="Person" asp-action="Index">Back to People</a>
-
-</div>
+	</tbody>
+    </table>
