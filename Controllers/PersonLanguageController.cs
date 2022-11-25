@@ -19,7 +19,7 @@ namespace mvc_ef.Controllers
             _context = context;
         }
 
-        public async Task<IActionResult> Language(int? id)
+        public async Task<IActionResult> Index(int? id)
         {
             if (id == null)
             {
@@ -35,6 +35,40 @@ namespace mvc_ef.Controllers
             }
 
             return View(person);
+        }
+
+
+        // GET: PersonLanguage/Delete/5
+        public async Task<IActionResult> Delete(int? languageId, int id)
+        {
+            if (languageId == null)
+            {
+                return NotFound();
+            }
+
+	    var language = _context.Languages.Single(u => u.LanguageId == languageId);
+
+            if (language == null)
+            {
+                return NotFound();
+            }
+	    ViewData["LanguageId"] = languageId;
+	    ViewData["PersonId"] = id;
+            return View(language);
+        }
+
+        // POST: PersonLangauge/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+
+	    // var lang = await _context.Languages.Include(g => g.People).Single(u => u.LanguageId == languageId);
+            // var pers = await _context.People.Single(u => u.PersonId == personId);
+	    // var del_lang = lang.People.Where(ugu => ugu.PersonId == pers.PersonId).FirstOrDefault();
+            // _context.People.Remove(del_lang);
+            // await _context.SaveChangesAsync();
+            return RedirectToAction("Index", new { id = id });
         }
 
 	
