@@ -14,14 +14,12 @@ public class SqliteContext : DbContext
     {
     }
 
+    //DbSets
     public DbSet<mvc_ef.Models.Person> People { get; set; }
-
     public DbSet<mvc_ef.Models.City> Cities { get; set; }
-
     public DbSet<mvc_ef.Models.Country> Countries { get; set; }
-
     public DbSet<mvc_ef.Models.Language> Languages { get; set; }
-
+    // public DbSet<mvc_ef.Models.LanguagePerson> LanguagePerson { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelbuilder)
     {
@@ -38,7 +36,7 @@ public class SqliteContext : DbContext
 	OnModelCreating(modelbuilder);
     }
 
-//     public class PKConvention : Convention
+//     Public class PKConvention : Convention
 //     {
 // 	public PKConvention()
 // 	{

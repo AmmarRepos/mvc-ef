@@ -97,7 +97,7 @@ namespace mvc_ef.Models
                     }
                 );
                 context.SaveChanges();
-		context.OnModelCreatingUnprotected();
+		// context.OnModelCreatingUnprotected();
 	    }
 	}
     }

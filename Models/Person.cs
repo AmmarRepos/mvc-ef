@@ -11,6 +11,7 @@ namespace mvc_ef.Models
 	public int CityId { get; set; }
 	public City? City { get; set; }
 
+	// public virtual ICollection<LanguagePerson> LanguagesPeople { get; set; }
 	// Many-to-Many (Language - Person)
 	public virtual ICollection<Language> Languages { get; set; }
 

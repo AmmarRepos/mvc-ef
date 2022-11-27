@@ -19,7 +19,8 @@ namespace mvc_ef.Controllers
             _context = context;
         }
 
-        public async Task<IActionResult> Index(int? id)
+	// PersonLanguage/AddAdd/5
+	public async Task<IActionResult> IndexAdd(int? id)
         {
             if (id == null)
             {
@@ -38,7 +39,53 @@ namespace mvc_ef.Controllers
         }
 
 
-        // GET: PersonLanguage/Delete/5
+	// GET: PersonLanguage/Add/5
+        public async Task<IActionResult> Add(int? languageId, int id)
+        {
+            if (languageId == null)
+            {
+                return NotFound();
+            }
+
+	    var language = _context.Languages.Single(u => u.LanguageId == languageId);
+
+            if (language == null)
+            {
+                return NotFound();
+            }
+	    ViewData["PersonId"] = id;
+            return View(language);
+        }
+
+        // POST: PersonLangauge/Add/5
+	[HttpPost, ActionName("Add")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Add(int id, int languageId)
+        {
+            return RedirectToAction("IndexAdd", new { id = id });
+        }
+
+
+	// PersonLanguage/IndexDelete/5
+	public async Task<IActionResult> IndexDelete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var person = await _context.People
+                .Include(p => p.Languages)
+                .FirstOrDefaultAsync(m => m.PersonId == id);
+            if (person == null)
+            {
+                return NotFound();
+            }
+
+            return View(person);
+        }
+
+	// GET: PersonLanguage/Delete/5
         public async Task<IActionResult> Delete(int? languageId, int id)
         {
             if (languageId == null)
@@ -52,7 +99,6 @@ namespace mvc_ef.Controllers
             {
                 return NotFound();
             }
-	    ViewData["LanguageId"] = languageId;
 	    ViewData["PersonId"] = id;
             return View(language);
         }
@@ -60,14 +106,19 @@ namespace mvc_ef.Controllers
         // POST: PersonLangauge/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> Delete(int id, int languageId)
         {
-
-	    // var lang = await _context.Languages.Include(g => g.People).Single(u => u.LanguageId == languageId);
-            // var pers = await _context.People.Single(u => u.PersonId == personId);
-	    // var del_lang = lang.People.Where(ugu => ugu.PersonId == pers.PersonId).FirstOrDefault();
-            // _context.People.Remove(del_lang);
-            // await _context.SaveChangesAsync();
+	    var lang =  _context.Languages.Include(g => g.People).Single(u => u.LanguageId == languageId);
+	    var pers =  _context.People.Single(u => u.PersonId == id);
+	    var del_lang = lang.People.Where(ugu => ugu.PersonId == id).FirstOrDefault();
+	    // ModelBuilder modelBuilder = new ModelBuilder();
+	    // var del_lang = modelBuilder
+	    //	.Entity<Language>()
+	    //	.HasMany(p => p.People)
+	    //	.WithMany(p => p.Languages)
+	    //	.UsingEntity(j => j.Languages.LanguageId == languageId && j.People.PersonId == id);
+            _context.People.Remove(del_lang);
+            await _context.SaveChangesAsync();
             return RedirectToAction("Index", new { id = id });
         }
 

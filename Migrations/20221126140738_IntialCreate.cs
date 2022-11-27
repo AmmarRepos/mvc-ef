@@ -4,7 +4,7 @@
 
 namespace mvc_ef.Migrations
 {
-    public partial class IntitialCreate : Migration
+    public partial class IntialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

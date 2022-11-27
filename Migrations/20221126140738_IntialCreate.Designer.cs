@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace mvc_ef.Migrations
 {
     [DbContext(typeof(SqliteContext))]
-    [Migration("20221122150939_IntitialCreate")]
-    partial class IntitialCreate
+    [Migration("20221126140738_IntialCreate")]
+    partial class IntialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
