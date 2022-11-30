@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Linq;
-
+    
 namespace mvc_ef.Models
 {
     public static class SeedData
@@ -14,90 +14,45 @@ namespace mvc_ef.Models
                     DbContextOptions<SqliteContext>>()))
             {
                 // Look for any movies.
-                if (context.Countries.Any())
+                if (context.People.Any())
                 {
                     return;   // DB has been seeded
                 }
+		Country countryA, countryB, countryC;
+		context.AddRangeAsync(new[]
+		{
+		    countryA = new Country() { CountryName = "CountryA"},
+		    countryB = new Country() { CountryName = "CountryB"},
+		    countryC = new Country() { CountryName = "CountryC"},
+		});
+		context.SaveChangesAsync();
 
-                context.Countries.AddRange(
-                    new Country
-                    {
-                        CountryId = 1,
-			CountryName = "Country1",
-                    },
+		City cityA, cityB, cityC;
+		context.AddRangeAsync(new[]
+		{
+		    cityA = new City() { CityName = "CityA", Country = countryA},
+		    cityB = new City() { CityName = "CityB", Country = countryB},
+		    cityC = new City() { CityName = "CityC", Country = countryC},
+		});
+		context.SaveChangesAsync();
 
-		    new Country
-                    {
-			CountryId = 2,
-			CountryName = "Country2",
-                    },
+		Language languageA, languageB, languageC;
+		context.AddRangeAsync(new[]
+		{
+		    languageA = new Language() { LanguageName = "LanguageA" },
+		    languageB = new Language() { LanguageName = "LanguageB" },
+		    languageC = new Language() { LanguageName = "LanguageC" },
+		});
+		context.SaveChangesAsync();
 
-		    new Country
-                    {
-			CountryId = 3,
-			CountryName = "Country3",
-                    }
-                );
-
-		context.Cities.AddRange(
-                    new City
-                    {
-                        CityId = 1,
-			CityName = "CityA",
-			CountryId = 1,
-                    },
-		    new City
-		    {
-                        CityId = 2,
-			CityName = "CityB",
-			CountryId = 1,
-                    },
-		    new City
-		    {
-                        CityId = 3,
-			CityName = "CityC",
-			CountryId = 2,
-                    }
-                );
-		context.People.AddRange(
-                    new Person
-                    {
-                        PersonId = 1,
-			PersonName = "PersonA",
-			CityId = 1,
-                    },
-		    new Person
-		    {
-                        PersonId = 2,
-			PersonName = "PersonB",
-			CityId = 1,
-                    },
-		    new Person
-		    {
-                        PersonId = 3,
-			PersonName = "PersonC",
-			CityId = 2,
-                    }
-                );
-		context.Languages.AddRange(
-                    new Language
-                    {
-                        LanguageId = 1,
-			LanguageName = "LanguageA",
-		    },
-		    new Language
-		    {
-                        LanguageId = 2,
-			LanguageName = "LanguageB",
-                    },
-		    new Language
-		    {
-                        LanguageId = 3,
-			LanguageName = "LangaugeC",
-                    }
-                );
-                context.SaveChanges();
-		// context.OnModelCreatingUnprotected();
+		Person personA, personB, personC;
+		context.AddRangeAsync(new[]
+		{
+		    personA = new Person() { PersonName = "PersonA", Languages = new() {languageA, languageB}, City = cityA },
+		    personB = new Person() { PersonName = "PersonB", Languages = new() {languageB}, City = cityB },
+		    personC = new Person() { PersonName = "PersonC", Languages = new() {languageC}, City = cityC},
+		});
+		context.SaveChangesAsync();
 	    }
 	}
     }

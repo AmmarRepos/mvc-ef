@@ -4,15 +4,17 @@ namespace mvc_ef.Models
 {
     public class City
     {
-        public int CityId { get; set; }
-	[Display(Name = "City Name")]
-        public string CityName { get; set; }
+        public int Id { get; set; }
+	[Display(Name = "City")]
+        public string CityName { get; set; } = string.Empty;
 
-	// One-to-Many (City - Country)
-	public int CountryId { get; set; }
+	// CSharp reference
 	public Country Country { get; set; }
+	// Foregin key
+	public int CountryId { get; set; }
+
 
 	// One-to-Many (Person - City)
-	public ICollection<Person>? People { get; set; }
+	public List<Person>? People { get; set; } = new();
     }
 }

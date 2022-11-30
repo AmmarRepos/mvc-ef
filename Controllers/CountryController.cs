@@ -33,7 +33,7 @@ namespace mvc_ef.Controllers
             }
 
             var country = await _context.Countries
-                .FirstOrDefaultAsync(m => m.CountryId == id);
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (country == null)
             {
                 return NotFound();
@@ -53,7 +53,7 @@ namespace mvc_ef.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("CountryId,CountryName")] Country country)
+        public async Task<IActionResult> Create([Bind("Id,CountryName")] Country country)
         {
             if (ModelState.IsValid)
             {
@@ -85,9 +85,9 @@ namespace mvc_ef.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("CountryId,CountryName")] Country country)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,CountryName")] Country country)
         {
-            if (id != country.CountryId)
+            if (id != country.Id)
             {
                 return NotFound();
             }
@@ -101,7 +101,7 @@ namespace mvc_ef.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!CountryExists(country.CountryId))
+                    if (!CountryExists(country.Id))
                     {
                         return NotFound();
                     }
@@ -124,7 +124,7 @@ namespace mvc_ef.Controllers
             }
 
             var country = await _context.Countries
-                .FirstOrDefaultAsync(m => m.CountryId == id);
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (country == null)
             {
                 return NotFound();
@@ -146,7 +146,7 @@ namespace mvc_ef.Controllers
 
         private bool CountryExists(int id)
         {
-            return _context.Countries.Any(e => e.CountryId == id);
+            return _context.Countries.Any(e => e.Id == id);
         }
     }
 }

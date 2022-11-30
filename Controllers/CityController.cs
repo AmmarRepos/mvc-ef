@@ -35,7 +35,7 @@ namespace mvc_ef.Controllers
 
             var city = await _context.Cities
                 .Include(c => c.Country)
-                .FirstOrDefaultAsync(m => m.CityId == id);
+                .FirstOrDefaultAsync(cc => cc.Id == id);
             if (city == null)
             {
                 return NotFound();
@@ -47,7 +47,7 @@ namespace mvc_ef.Controllers
         // GET: City/Create
         public IActionResult Create()
         {
-            ViewData["CountryId"] = new SelectList(_context.Set<Country>(), "CountryId", "CountryId");
+            ViewData["CountryId"] = new SelectList(_context.Set<Country>(), "Id", "CountryName");
             return View();
         }
 
@@ -56,7 +56,7 @@ namespace mvc_ef.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("CityId,CityName,CountryId")] City city)
+        public async Task<IActionResult> Create([Bind("Id,CityName,CountryId")] City city)
         {
             if (ModelState.IsValid)
             {
@@ -64,7 +64,7 @@ namespace mvc_ef.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CountryId"] = new SelectList(_context.Set<Country>(), "CountryId", "CountryId", city.CountryId);
+            ViewData["CountryId"] = new SelectList(_context.Set<Country>(), "Id", "CountryId", city.Country.CountryName);
             return View(city);
         }
 
@@ -76,12 +76,14 @@ namespace mvc_ef.Controllers
                 return NotFound();
             }
 
-            var city = await _context.Cities.FindAsync(id);
+            var city = await _context.Cities
+		.Include(c => c.Country)
+		.FirstOrDefaultAsync(c => c.Id == id);
             if (city == null)
             {
                 return NotFound();
             }
-            ViewData["CountryId"] = new SelectList(_context.Set<Country>(), "CountryId", "CountryId", city.CountryId);
+            ViewData["Countries"] = new SelectList(_context.Set<Country>(), "Id", "CountryName", city.Country.CountryName);
             return View(city);
         }
 
@@ -90,9 +92,9 @@ namespace mvc_ef.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("CityId,CityName,CountryId")] City city)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,CityName,CountryId")] City city)
         {
-            if (id != city.CityId)
+            if (id != city.Id)
             {
                 return NotFound();
             }
@@ -106,7 +108,7 @@ namespace mvc_ef.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!CityExists(city.CityId))
+                    if (!CityExists(city.Id))
                     {
                         return NotFound();
                     }
@@ -117,7 +119,7 @@ namespace mvc_ef.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CountryId"] = new SelectList(_context.Set<Country>(), "CountryId", "CountryId", city.CountryId);
+            ViewData["CountryId"] = new SelectList(_context.Set<Country>(), "Id", "CountryId", city.Country.CountryName);
             return View(city);
         }
 
@@ -131,7 +133,7 @@ namespace mvc_ef.Controllers
 
             var city = await _context.Cities
                 .Include(c => c.Country)
-                .FirstOrDefaultAsync(m => m.CityId == id);
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (city == null)
             {
                 return NotFound();
@@ -153,7 +155,7 @@ namespace mvc_ef.Controllers
 
         private bool CityExists(int id)
         {
-            return _context.Cities.Any(e => e.CityId == id);
+            return _context.Cities.Any(e => e.Id == id);
         }
     }
 }

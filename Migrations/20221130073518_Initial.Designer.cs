@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace mvc_ef.Migrations
 {
     [DbContext(typeof(SqliteContext))]
-    [Migration("20221126140738_IntialCreate")]
-    partial class IntialCreate
+    [Migration("20221130073518_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -19,33 +19,32 @@ namespace mvc_ef.Migrations
 
             modelBuilder.Entity("LanguagePerson", b =>
                 {
-                    b.Property<int>("LanguagesLanguageId")
+                    b.Property<int>("LanguagesId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("PeoplePersonId")
+                    b.Property<int>("PeopleId")
                         .HasColumnType("INTEGER");
 
-                    b.HasKey("LanguagesLanguageId", "PeoplePersonId");
+                    b.HasKey("LanguagesId", "PeopleId");
 
-                    b.HasIndex("PeoplePersonId");
+                    b.HasIndex("PeopleId");
 
                     b.ToTable("LanguagePerson");
                 });
 
             modelBuilder.Entity("mvc_ef.Models.City", b =>
                 {
-                    b.Property<int>("CityId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("CityName")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<int>("CountryId")
                         .HasColumnType("INTEGER");
 
-                    b.HasKey("CityId");
+                    b.HasKey("Id");
 
                     b.HasIndex("CountryId");
 
@@ -54,37 +53,35 @@ namespace mvc_ef.Migrations
 
             modelBuilder.Entity("mvc_ef.Models.Country", b =>
                 {
-                    b.Property<int>("CountryId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("CountryName")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.HasKey("CountryId");
+                    b.HasKey("Id");
 
                     b.ToTable("Countries");
                 });
 
             modelBuilder.Entity("mvc_ef.Models.Language", b =>
                 {
-                    b.Property<int>("LanguageId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("LanguageName")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.HasKey("LanguageId");
+                    b.HasKey("Id");
 
                     b.ToTable("Languages");
                 });
 
             modelBuilder.Entity("mvc_ef.Models.Person", b =>
                 {
-                    b.Property<int>("PersonId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -92,10 +89,9 @@ namespace mvc_ef.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("PersonName")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.HasKey("PersonId");
+                    b.HasKey("Id");
 
                     b.HasIndex("CityId");
 
@@ -106,13 +102,13 @@ namespace mvc_ef.Migrations
                 {
                     b.HasOne("mvc_ef.Models.Language", null)
                         .WithMany()
-                        .HasForeignKey("LanguagesLanguageId")
+                        .HasForeignKey("LanguagesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("mvc_ef.Models.Person", null)
                         .WithMany()
-                        .HasForeignKey("PeoplePersonId")
+                        .HasForeignKey("PeopleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

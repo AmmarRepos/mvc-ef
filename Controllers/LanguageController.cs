@@ -33,7 +33,7 @@ namespace mvc_ef.Controllers
             }
 
             var language = await _context.Languages
-                .FirstOrDefaultAsync(m => m.LanguageId == id);
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (language == null)
             {
                 return NotFound();
@@ -53,7 +53,7 @@ namespace mvc_ef.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("LanguageId,LanguageName")] Language language)
+        public async Task<IActionResult> Create([Bind("Id,LanguageName")] Language language)
         {
             if (ModelState.IsValid)
             {
@@ -85,9 +85,9 @@ namespace mvc_ef.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("LanguageId,LanguageName")] Language language)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,LanguageName")] Language language)
         {
-            if (id != language.LanguageId)
+            if (id != language.Id)
             {
                 return NotFound();
             }
@@ -101,7 +101,7 @@ namespace mvc_ef.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!LanguageExists(language.LanguageId))
+                    if (!LanguageExists(language.Id))
                     {
                         return NotFound();
                     }
@@ -124,7 +124,7 @@ namespace mvc_ef.Controllers
             }
 
             var language = await _context.Languages
-                .FirstOrDefaultAsync(m => m.LanguageId == id);
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (language == null)
             {
                 return NotFound();
@@ -146,7 +146,7 @@ namespace mvc_ef.Controllers
 
         private bool LanguageExists(int id)
         {
-            return _context.Languages.Any(e => e.LanguageId == id);
+            return _context.Languages.Any(e => e.Id == id);
         }
     }
 }

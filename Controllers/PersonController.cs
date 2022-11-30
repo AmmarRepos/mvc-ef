@@ -22,7 +22,7 @@ namespace mvc_ef.Controllers
         // GET: Person
         public async Task<IActionResult> Index()
         {
-            var sqliteContext = _context.People.Include(p => p.City).ThenInclude(city => city.Country);
+            var sqliteContext = _context.People.Include(p => p.City).ThenInclude(c => c.Country);
             return View(await sqliteContext.ToListAsync());
         }
 
@@ -36,7 +36,8 @@ namespace mvc_ef.Controllers
 
             var person = await _context.People
                 .Include(p => p.City)
-                .FirstOrDefaultAsync(m => m.PersonId == id);
+		.ThenInclude(c => c.Country)
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (person == null)
             {
                 return NotFound();
@@ -48,7 +49,7 @@ namespace mvc_ef.Controllers
         // GET: Person/Create
         public IActionResult Create()
         {
-            ViewData["CityId"] = new SelectList(_context.Set<City>(), "CityId", "CityId");
+            ViewData["Cities"] = new SelectList(_context.Set<City>(), "Id", "CityName");
             return View();
         }
 
@@ -57,19 +58,16 @@ namespace mvc_ef.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PersonId,PersonName,CityId")] Person person)
+        public async Task<IActionResult> Create([Bind("Id,PersonName,CityId")] Person person)
         {
 	    
-	    Random rnd = new Random();
-	    int num = rnd.Next();
-	    person.PersonId = num;
             if (ModelState.IsValid)
             {
                 _context.Add(person);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CityId"] = new SelectList(_context.Set<City>(), "CityId", "CityId", person.CityId);
+            ViewData["Cities"] = new SelectList(_context.Set<City>(), "Id", "CityName", person.City.CityName);
 	    return View(person);
         }
 
@@ -86,7 +84,7 @@ namespace mvc_ef.Controllers
             {
                 return NotFound();
             }
-	    ViewData["CityId"] = new SelectList(_context.Set<City>(), "CityId", "CityId", person.CityId);
+	    ViewData["Cities"] = new SelectList(_context.Set<City>(), "Id", "CityName", person.City.CityName);
             return View(person);
         }
 
@@ -95,14 +93,13 @@ namespace mvc_ef.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("PersonId,PersonName,CityId")] Person person)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,PersonName,CityId")] Person person)
         {
-            if (id != person.PersonId)
+            if (id != person.Id)
             {
                 return NotFound();
             }
-	    //            ModelState.Remove("City");
-	    //            ModelState.Remove("Languages");
+
             if (ModelState.IsValid)
             {
                 try
@@ -112,7 +109,7 @@ namespace mvc_ef.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!PersonExists(person.PersonId))
+                    if (!PersonExists(person.Id))
                     {
                         return NotFound();
                     }
@@ -123,7 +120,7 @@ namespace mvc_ef.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CityId"] = new SelectList(_context.Set<City>(), "CityId", "CityId", person.CityId);
+            ViewData["Cities"] = new SelectList(_context.Set<City>(), "Id", "CityName", person.City.CityName);
             return View(person);
         }
 
@@ -137,7 +134,7 @@ namespace mvc_ef.Controllers
 
             var person = await _context.People
                 .Include(p => p.City)
-                .FirstOrDefaultAsync(m => m.PersonId == id);
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (person == null)
             {
                 return NotFound();
@@ -158,28 +155,9 @@ namespace mvc_ef.Controllers
         }
 
 
-        // public async Task<IActionResult> Language(int? id)
-        // {
-        //     if (id == null)
-        //     {
-        //         return NotFound();
-        //     }
-
-        //     var person = await _context.People
-        //         .Include(p => p.Languages)
-        //         .FirstOrDefaultAsync(m => m.PersonId == id);
-        //     if (person == null)
-        //     {
-        //         return NotFound();
-        //     }
-
-        //     return View(person);
-        // }
-
-	
         private bool PersonExists(int id)
         {
-            return _context.People.Any(e => e.PersonId == id);
+            return _context.People.Any(e => e.Id == id);
         }
     }
 }

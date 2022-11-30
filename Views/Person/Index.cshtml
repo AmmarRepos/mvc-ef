@@ -33,9 +33,6 @@
             <td>
                 @Html.DisplayFor(modelItem => item.PersonName)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.City.CityId)
-            </td>
 	    <td>
                 @Html.DisplayFor(modelItem => item.City.CityName)
             </td>
@@ -43,10 +40,10 @@
                 @Html.DisplayFor(modelItem => item.City.Country.CountryName)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.PersonId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.PersonId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.PersonId">Delete</a> |
-		<a asp-controller="PersonLanguage" asp-action="IndexDelete" asp-route-id="@item.PersonId">Languages</a>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a> |
+		<a asp-controller="PersonLanguage" asp-action="Edit" asp-route-id="@item.Id">Languages</a>
             </td>
         </tr>
 }

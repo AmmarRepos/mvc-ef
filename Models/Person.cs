@@ -4,21 +4,17 @@ namespace mvc_ef.Models
 {
     public class Person
     {
-        public int PersonId { get; set; }
+        public int Id { get; set; }
+	
+	[Display(Name = "Person")]	
         public string PersonName { get; set; }
 
-	// One-to-Many (Person - City)
+	// CSharp Reference
+	public City City { get; set; }
+	// Foregin Key
 	public int CityId { get; set; }
-	public City? City { get; set; }
 
-	// public virtual ICollection<LanguagePerson> LanguagesPeople { get; set; }
 	// Many-to-Many (Language - Person)
-	public virtual ICollection<Language> Languages { get; set; }
-
-	// [Display(Name = "Birth Date")]
-        // [DataType(DataType.Date)]
-        // public DateTime BirthDate { get; set; }
-
-	// public List<Language> Langauges { get; set; } = new List<Language>();
+	public virtual List<Language> Languages { get; set; } = new();
     }
 }

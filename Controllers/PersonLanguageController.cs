@@ -19,8 +19,8 @@ namespace mvc_ef.Controllers
             _context = context;
         }
 
-	// PersonLanguage/AddAdd/5
-	public async Task<IActionResult> IndexAdd(int? id)
+	// PersonLanguage/Edit/5
+	public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
             {
@@ -29,7 +29,7 @@ namespace mvc_ef.Controllers
 
             var person = await _context.People
                 .Include(p => p.Languages)
-                .FirstOrDefaultAsync(m => m.PersonId == id);
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (person == null)
             {
                 return NotFound();
@@ -39,93 +39,107 @@ namespace mvc_ef.Controllers
         }
 
 
-	// GET: PersonLanguage/Add/5
-        public async Task<IActionResult> Add(int? languageId, int id)
-        {
-            if (languageId == null)
-            {
-                return NotFound();
-            }
-
-	    var language = _context.Languages.Single(u => u.LanguageId == languageId);
-
-            if (language == null)
-            {
-                return NotFound();
-            }
-	    ViewData["PersonId"] = id;
-            return View(language);
-        }
-
-        // POST: PersonLangauge/Add/5
-	[HttpPost, ActionName("Add")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Add(int id, int languageId)
-        {
-            return RedirectToAction("IndexAdd", new { id = id });
-        }
-
-
-	// PersonLanguage/IndexDelete/5
-	public async Task<IActionResult> IndexDelete(int? id)
+	// PersonLanguage/Add/5
+	public async Task<IActionResult> Add(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var person = await _context.People
+	    var person = await _context.People
                 .Include(p => p.Languages)
-                .FirstOrDefaultAsync(m => m.PersonId == id);
-            if (person == null)
+                .FirstOrDefaultAsync(m => m.Id == id);
+	    
+	    // var languages =    
+	    // 	from c in _context.Languages    
+	    // 	where !(person.select Languages.Id)
+	    // 	.Contains(c.Id)    
+	    // 	select c;
+
+
+	    var languages =  _context.Languages;
+	    // var person = await _context.Languages
+            //     .Include(p => p.People).Where(
+	    // 	    .FirstOrDefaultAsync(m => m.PersonId == id));	
+
+            if (languages == null)
             {
                 return NotFound();
             }
-
-            return View(person);
+	    ViewData["PersonId"] = id;
+	    ViewData["PersonName"] = person.PersonName;
+	    return View(languages);
         }
 
-	// GET: PersonLanguage/Delete/5
-        public async Task<IActionResult> Delete(int? languageId, int id)
+	// GET:PersonLanguage/AddLanguage/5
+	public async Task<IActionResult> AddLanguage(int? id, int languageId)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var language =  _context.Languages.Find(languageId);
+	    var person = _context.People.Find(id);
+            if (language == null)
+            {
+                return NotFound();
+            }
+	    ViewData["PersonId"] = id;
+	    ViewData["PersonName"] = person.PersonName;
+	    return View(language);
+        }
+
+
+        // POST: PersonLangauge/AddLanguage/5
+	[HttpPost, ActionName("AddLanguage")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddLanguageConfirmed(int id, int languageId)
+        {
+	    var person = _context.People.Include(p => p.Languages).FirstOrDefault(p => p.Id == id);
+	    var languageToAdd = _context.Languages.Find(languageId);
+	    // person.Languages.Add(languageToAdd);
+	    await _context.SaveChangesAsync();
+	    return RedirectToAction("Edit", new { id = id });
+        }
+
+
+	// GET: PersonLanguage/DeleteLanguage/5
+        public async Task<IActionResult> DeleteLanguage(int? languageId, int id)
         {
             if (languageId == null)
             {
                 return NotFound();
             }
 
-	    var language = _context.Languages.Single(u => u.LanguageId == languageId);
+	    var language = _context.Languages.Single(u => u.Id == languageId);
+	    var person = _context.People.Single(p => p.Id == id);
 
             if (language == null)
             {
                 return NotFound();
             }
 	    ViewData["PersonId"] = id;
+	    ViewData["PersonName"] = person.PersonName;
             return View(language);
         }
 
-        // POST: PersonLangauge/Delete/5
-        [HttpPost, ActionName("Delete")]
+        // POST: PersonLangauge/DeleteLanugae/5
+        [HttpPost, ActionName("DeleteLanguage")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Delete(int id, int languageId)
+        public async Task<IActionResult> DeleteLanguage(int id, int languageId)
         {
-	    var lang =  _context.Languages.Include(g => g.People).Single(u => u.LanguageId == languageId);
-	    var pers =  _context.People.Single(u => u.PersonId == id);
-	    var del_lang = lang.People.Where(ugu => ugu.PersonId == id).FirstOrDefault();
-	    // ModelBuilder modelBuilder = new ModelBuilder();
-	    // var del_lang = modelBuilder
-	    //	.Entity<Language>()
-	    //	.HasMany(p => p.People)
-	    //	.WithMany(p => p.Languages)
-	    //	.UsingEntity(j => j.Languages.LanguageId == languageId && j.People.PersonId == id);
-            _context.People.Remove(del_lang);
+	    var person = _context.People.Include(p => p.Languages).FirstOrDefault(p => p.Id == id);
+	    var languageToRemove = _context.Languages.Find(languageId);
+	    person.Languages.Remove(languageToRemove);
             await _context.SaveChangesAsync();
-            return RedirectToAction("Index", new { id = id });
+            return RedirectToAction("Edit", new { id = id });
         }
 
 	
         private bool PersonExists(int id)
         {
-            return _context.People.Any(e => e.PersonId == id);
+            return _context.People.Any(e => e.Id == id);
         }
     }
 }

@@ -1,33 +1,36 @@
-@model mvc_ef.Models.Language
+@model IEnumerable<mvc_ef.Models.Language>
+    @{
+	ViewData["Title"] = "Add Languages";
+    }
 
-@{
-    ViewData["Title"] = "Add Language";
-}
+    <h1>@ViewData["personName"]</h1>
 
-<h1>Add Language</h1>
+    <table class="table">
+	<thead>
+            <tr>
+		<th>
+                    @Html.DisplayNameFor(model => model.LanguageName)
+		</th>
+		<th>
 
-<h3>Are you sure you want to add @Model.LanguageName?</h3>
-<div>
-    <h4>to Person Id is @ViewData["PersonId"]</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-        
-        </dt>
-        <dd class = "col-sm-10">
-        
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.LanguageId)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.LanguageName)
-        </dd>
-    </dl>
-    
-    <form asp-action="Add">
-        <input type="hidden" asp-for=@Model.LanguageId />
-        <input type="submit" value="Add Language" class="btn btn-primary" /> |
-        <a asp-action="IndexAdd" asp-controller="PersonLanguage" asp-route-id=@ViewData["PersonId"]>Back to Language List</a>
-    </form>
-</div>
+		</th>
+		</th>
+            </tr>
+	</thead>
+	<tbody>
+	    @foreach (var item in Model)
+	    {
+		<tr>
+		<td>
+	    	@Html.DisplayFor(modelItem => item.LanguageName)
+		</td>
+		<td>
+                    <a asp-action="AddLanguage" asp-route-languageId="@item.Id" asp-route-id=@ViewData["personId"]>Add</a>
+		</td>
+		</tr>
+		}
+	</tbody>
+    </table>
+    <div>
+	<a asp-action="Edit" asp-route-id=@ViewData["personId"]>Back to List</a>
+    </div>

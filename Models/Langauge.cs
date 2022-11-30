@@ -4,11 +4,11 @@ namespace mvc_ef.Models
 {
     public class Language
     {
-        public int LanguageId { get; set; }
-        public string LanguageName { get; set; }
+        public int Id { get; set; }
+	[Display(Name = "Language")]
+        public string LanguageName { get; set; } = string.Empty;
 	
-	// public virtual ICollection<LanguagePerson> LanguagesPeople { get; set; }
 	// Many-to-Many (Language - Person)
-	public virtual ICollection<Person> People { get; set; }
+	public virtual List<Person> People { get; set; } = new();
     }
 }

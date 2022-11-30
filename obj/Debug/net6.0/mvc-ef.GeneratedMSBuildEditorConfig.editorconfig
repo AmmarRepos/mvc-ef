@@ -107,16 +107,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGVyc29uTGFuZ3VhZ2UvQWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/ammar/repos/mvc-ef/Views/PersonLanguage/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGVyc29uTGFuZ3VhZ2UvRGVsZXRlLmNzaHRtbA==
+[/home/ammar/repos/mvc-ef/Views/PersonLanguage/AddLanguage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGVyc29uTGFuZ3VhZ2UvQWRkTGFuZ3VhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/ammar/repos/mvc-ef/Views/PersonLanguage/IndexAdd.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGVyc29uTGFuZ3VhZ2UvSW5kZXhBZGQuY3NodG1s
+[/home/ammar/repos/mvc-ef/Views/PersonLanguage/DeleteLanguage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGVyc29uTGFuZ3VhZ2UvRGVsZXRlTGFuZ3VhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/ammar/repos/mvc-ef/Views/PersonLanguage/IndexDelete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGVyc29uTGFuZ3VhZ2UvSW5kZXhEZWxldGUuY3NodG1s
+[/home/ammar/repos/mvc-ef/Views/PersonLanguage/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGVyc29uTGFuZ3VhZ2UvRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/ammar/repos/mvc-ef/Views/Shared/Error.cshtml]

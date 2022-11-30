@@ -4,7 +4,7 @@
 
 namespace mvc_ef.Migrations
 {
-    public partial class IntialCreate : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,45 +12,45 @@ namespace mvc_ef.Migrations
                 name: "Countries",
                 columns: table => new
                 {
-                    CountryId = table.Column<int>(type: "INTEGER", nullable: false)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    CountryName = table.Column<string>(type: "TEXT", nullable: false)
+                    CountryName = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Countries", x => x.CountryId);
+                    table.PrimaryKey("PK_Countries", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Languages",
                 columns: table => new
                 {
-                    LanguageId = table.Column<int>(type: "INTEGER", nullable: false)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    LanguageName = table.Column<string>(type: "TEXT", nullable: false)
+                    LanguageName = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Languages", x => x.LanguageId);
+                    table.PrimaryKey("PK_Languages", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Cities",
                 columns: table => new
                 {
-                    CityId = table.Column<int>(type: "INTEGER", nullable: false)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    CityName = table.Column<string>(type: "TEXT", nullable: false),
+                    CityName = table.Column<string>(type: "TEXT", nullable: true),
                     CountryId = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Cities", x => x.CityId);
+                    table.PrimaryKey("PK_Cities", x => x.Id);
                     table.ForeignKey(
                         name: "FK_Cities_Countries_CountryId",
                         column: x => x.CountryId,
                         principalTable: "Countries",
-                        principalColumn: "CountryId",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -58,19 +58,19 @@ namespace mvc_ef.Migrations
                 name: "People",
                 columns: table => new
                 {
-                    PersonId = table.Column<int>(type: "INTEGER", nullable: false)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    PersonName = table.Column<string>(type: "TEXT", nullable: false),
+                    PersonName = table.Column<string>(type: "TEXT", nullable: true),
                     CityId = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_People", x => x.PersonId);
+                    table.PrimaryKey("PK_People", x => x.Id);
                     table.ForeignKey(
                         name: "FK_People_Cities_CityId",
                         column: x => x.CityId,
                         principalTable: "Cities",
-                        principalColumn: "CityId",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -78,23 +78,23 @@ namespace mvc_ef.Migrations
                 name: "LanguagePerson",
                 columns: table => new
                 {
-                    LanguagesLanguageId = table.Column<int>(type: "INTEGER", nullable: false),
-                    PeoplePersonId = table.Column<int>(type: "INTEGER", nullable: false)
+                    LanguagesId = table.Column<int>(type: "INTEGER", nullable: false),
+                    PeopleId = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_LanguagePerson", x => new { x.LanguagesLanguageId, x.PeoplePersonId });
+                    table.PrimaryKey("PK_LanguagePerson", x => new { x.LanguagesId, x.PeopleId });
                     table.ForeignKey(
-                        name: "FK_LanguagePerson_Languages_LanguagesLanguageId",
-                        column: x => x.LanguagesLanguageId,
+                        name: "FK_LanguagePerson_Languages_LanguagesId",
+                        column: x => x.LanguagesId,
                         principalTable: "Languages",
-                        principalColumn: "LanguageId",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_LanguagePerson_People_PeoplePersonId",
-                        column: x => x.PeoplePersonId,
+                        name: "FK_LanguagePerson_People_PeopleId",
+                        column: x => x.PeopleId,
                         principalTable: "People",
-                        principalColumn: "PersonId",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -104,9 +104,9 @@ namespace mvc_ef.Migrations
                 column: "CountryId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_LanguagePerson_PeoplePersonId",
+                name: "IX_LanguagePerson_PeopleId",
                 table: "LanguagePerson",
-                column: "PeoplePersonId");
+                column: "PeopleId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_People_CityId",

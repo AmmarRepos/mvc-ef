@@ -4,11 +4,12 @@ namespace mvc_ef.Models
 {
     public class Country
     {
-        public int CountryId { get; set; }
-	[Display(Name = "Country Name")]
-        public string CountryName { get; set; }
+        public int Id { get; set; }
+
+	[Display(Name = "Country")]
+        public string CountryName { get; set; } = string.Empty;
 
 	// One-to-Many (City - Country)
-	public ICollection<City> Cities { get; set; }
+	public List<City> Cities { get; set; } = new();
     }
 }
