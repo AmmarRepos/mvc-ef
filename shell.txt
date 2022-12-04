@@ -16720,4 +16720,1049 @@ info: Microsoft.EntityFrameworkCore.Database.Command[20101]
       SELECT "l"."Id", "l"."LanguageName"
       FROM "Languages" AS "l"
 killed
+~/repos/mvc-ef $ Welcome to the Emacs shell
+
+~/repos/mvc-ef $ dotnet run
+Building...
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (33ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "People" AS "p")
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: https://localhost:7223
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5193
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/ammar/repos/mvc-ef/
+killed
+~/repos/mvc-ef $ dotnet build
+Microsoft (R) Build Engine version 17.2.0+41abc5629 for .NET
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  mvc-ef -> /home/ammar/repos/mvc-ef/bin/Debug/net6.0/mvc-ef.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:03.91
+~/repos/mvc-ef $ Welcome to the Emacs shell
+
+~/repos/mvc-ef $ dotnet build
+Microsoft (R) Build Engine version 17.2.0+41abc5629 for .NET
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+/home/ammar/repos/mvc-ef/Models/City.cs(18,21): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Models/ErrorViewModel.cs(5,18): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(76,35): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(108,42): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+  mvc-ef -> /home/ammar/repos/mvc-ef/bin/Debug/net6.0/mvc-ef.dll
+
+Build succeeded.
+
+/home/ammar/repos/mvc-ef/Models/City.cs(18,21): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Models/ErrorViewModel.cs(5,18): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(76,35): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(108,42): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+    4 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:21.95
+~/repos/mvc-ef $ dotnet run
+Building...
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (39ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "People" AS "p")
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: https://localhost:7223
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5193
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/ammar/repos/mvc-ef/
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."Id", "p"."CityId", "p"."PersonName", "c"."Id", "c"."CityName", "c"."CountryId", "c0"."Id", "c0"."CountryName"
+      FROM "People" AS "p"
+      INNER JOIN "Cities" AS "c" ON "p"."CityId" = "c"."Id"
+      INNER JOIN "Countries" AS "c0" ON "c"."CountryId" = "c0"."Id"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (9ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+fail: Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware[1]
+      An unhandled exception has occurred while executing the request.
+      System.InvalidOperationException: The LINQ expression 'DbSet<Language>()
+          .Except(__p_0)' could not be translated. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to 'AsEnumerable', 'AsAsyncEnumerable', 'ToList', or 'ToListAsync'. See https://go.microsoft.com/fwlink/?linkid=2101038 for more information.
+         at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+         at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.Expand(Expression query)
+         at Microsoft.EntityFrameworkCore.Query.QueryTranslationPreprocessor.Process(Expression query)
+         at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+         at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+         at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+         at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass9_0`1.<Execute>b__0()
+         at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+         at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+         at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+         at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetEnumerator()
+         at AspNetCoreGeneratedDocument.Views_PersonLanguage_Add.ExecuteAsync() in /home/ammar/repos/mvc-ef/Views/PersonLanguage/Add.cshtml:line 21
+         at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+         at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+         at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+         at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+         at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+         at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+         at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+         at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+      --- End of stack trace from previous location ---
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+      --- End of stack trace from previous location ---
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+         at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+         at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+killed
+~/repos/mvc-ef $ dotnet run
+Building...
+/home/ammar/repos/mvc-ef/Models/City.cs(18,21): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Models/ErrorViewModel.cs(5,18): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(76,35): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(108,42): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (68ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "People" AS "p")
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: https://localhost:7223
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5193
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/ammar/repos/mvc-ef/
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (22ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."Id", "p"."CityId", "p"."PersonName", "c"."Id", "c"."CityName", "c"."CountryId", "c0"."Id", "c0"."CountryName"
+      FROM "People" AS "p"
+      INNER JOIN "Cities" AS "c" ON "p"."CityId" = "c"."Id"
+      INNER JOIN "Countries" AS "c0" ON "c"."CountryId" = "c0"."Id"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+fail: Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware[1]
+      An unhandled exception has occurred while executing the request.
+      System.InvalidOperationException: The LINQ expression 'DbSet<Language>()
+          .Except(__p_0)' could not be translated. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to 'AsEnumerable', 'AsAsyncEnumerable', 'ToList', or 'ToListAsync'. See https://go.microsoft.com/fwlink/?linkid=2101038 for more information.
+         at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+         at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.Expand(Expression query)
+         at Microsoft.EntityFrameworkCore.Query.QueryTranslationPreprocessor.Process(Expression query)
+         at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+         at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+         at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+         at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass9_0`1.<Execute>b__0()
+         at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+         at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+         at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+         at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetEnumerator()
+         at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+         at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+         at mvc_ef.Controllers.PersonLanguageController.Add(Nullable`1 id) in /home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs:line 61
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+      --- End of stack trace from previous location ---
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+      --- End of stack trace from previous location ---
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+         at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+         at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+killed
+~/repos/mvc-ef $ dotnet run
+Building...
+/home/ammar/repos/mvc-ef/Models/City.cs(18,21): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Models/ErrorViewModel.cs(5,18): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(76,35): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(108,42): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (32ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "People" AS "p")
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: https://localhost:7223
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5193
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/ammar/repos/mvc-ef/
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (15ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."Id", "p"."CityId", "p"."PersonName", "c"."Id", "c"."CityName", "c"."CountryId", "c0"."Id", "c0"."CountryName"
+      FROM "People" AS "p"
+      INNER JOIN "Cities" AS "c" ON "p"."CityId" = "c"."Id"
+      INNER JOIN "Countries" AS "c0" ON "c"."CountryId" = "c0"."Id"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+fail: Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware[1]
+      An unhandled exception has occurred while executing the request.
+      System.InvalidOperationException: The LINQ expression 'DbSet<Language>()
+          .Except(__p_0)' could not be translated. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to 'AsEnumerable', 'AsAsyncEnumerable', 'ToList', or 'ToListAsync'. See https://go.microsoft.com/fwlink/?linkid=2101038 for more information.
+         at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+         at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.Expand(Expression query)
+         at Microsoft.EntityFrameworkCore.Query.QueryTranslationPreprocessor.Process(Expression query)
+         at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+         at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+         at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+         at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass9_0`1.<Execute>b__0()
+         at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+         at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+         at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+         at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetEnumerator()
+         at AspNetCoreGeneratedDocument.Views_PersonLanguage_Add.ExecuteAsync() in /home/ammar/repos/mvc-ef/Views/PersonLanguage/Add.cshtml:line 21
+         at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+         at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+         at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+         at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+         at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+         at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+         at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+         at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+      --- End of stack trace from previous location ---
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+      --- End of stack trace from previous location ---
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+         at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+         at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+killed
+~/repos/mvc-ef $ dotnet run
+Building...
+/home/ammar/repos/mvc-ef/Models/City.cs(18,21): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Models/ErrorViewModel.cs(5,18): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(61,66): error CS1061: 'List<Language>' does not contain a definition for 'Id' and no accessible extension method 'Id' accepting a first argument of type 'List<Language>' could be found (are you missing a using directive or an assembly reference?) [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(76,35): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(108,42): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+
+The build failed. Fix the build errors and run again.
+~/repos/mvc-ef $ dotnet run
+Building...
+/home/ammar/repos/mvc-ef/Models/City.cs(18,21): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Models/ErrorViewModel.cs(5,18): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(52,55): error CS1061: 'Task<Person?>' does not contain a definition for 'Select' and no accessible extension method 'Select' accepting a first argument of type 'Task<Person?>' could be found (are you missing a using directive or an assembly reference?) [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(76,35): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(108,42): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+
+The build failed. Fix the build errors and run again.
+~/repos/mvc-ef $ dotnet build
+Microsoft (R) Build Engine version 17.2.0+41abc5629 for .NET
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+/home/ammar/repos/mvc-ef/Models/City.cs(18,21): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Models/ErrorViewModel.cs(5,18): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(53,41): error CS1061: 'Person' does not contain a definition for 'Langauges' and no accessible extension method 'Langauges' accepting a first argument of type 'Person' could be found (are you missing a using directive or an assembly reference?) [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(72,31): error CS0103: The name 'person' does not exist in the current context [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(77,35): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(109,42): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+
+Build FAILED.
+
+/home/ammar/repos/mvc-ef/Models/City.cs(18,21): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Models/ErrorViewModel.cs(5,18): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(77,35): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(109,42): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(53,41): error CS1061: 'Person' does not contain a definition for 'Langauges' and no accessible extension method 'Langauges' accepting a first argument of type 'Person' could be found (are you missing a using directive or an assembly reference?) [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(72,31): error CS0103: The name 'person' does not exist in the current context [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+    4 Warning(s)
+    2 Error(s)
+
+Time Elapsed 00:00:18.05
+~/repos/mvc-ef $ dotnet build
+Microsoft (R) Build Engine version 17.2.0+41abc5629 for .NET
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+/home/ammar/repos/mvc-ef/Models/City.cs(18,21): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Models/ErrorViewModel.cs(5,18): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(55,4): error CS1061: 'Person' does not contain a definition for 'Where' and no accessible extension method 'Where' accepting a first argument of type 'Person' could be found (are you missing a using directive or an assembly reference?) [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(79,35): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(111,42): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+
+Build FAILED.
+
+/home/ammar/repos/mvc-ef/Models/City.cs(18,21): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Models/ErrorViewModel.cs(5,18): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(79,35): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(111,42): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(55,4): error CS1061: 'Person' does not contain a definition for 'Where' and no accessible extension method 'Where' accepting a first argument of type 'Person' could be found (are you missing a using directive or an assembly reference?) [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+    4 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:17.36
+~/repos/mvc-ef $ dotnet build
+Microsoft (R) Build Engine version 17.2.0+41abc5629 for .NET
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(55,44): error CS1002: ; expected [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+
+Build FAILED.
+
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(55,44): error CS1002: ; expected [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+    0 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:05.40
+~/repos/mvc-ef $ dotnet build
+Microsoft (R) Build Engine version 17.2.0+41abc5629 for .NET
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+/home/ammar/repos/mvc-ef/Models/City.cs(18,21): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Models/ErrorViewModel.cs(5,18): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(50,19): error CS1061: 'IQueryable<Person>' does not contain a definition for 'GetAwaiter' and no accessible extension method 'GetAwaiter' accepting a first argument of type 'IQueryable<Person>' could be found (are you missing a using directive or an assembly reference?) [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(79,35): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(111,42): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+
+Build FAILED.
+
+/home/ammar/repos/mvc-ef/Models/City.cs(18,21): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Models/ErrorViewModel.cs(5,18): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(79,35): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(111,42): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(50,19): error CS1061: 'IQueryable<Person>' does not contain a definition for 'GetAwaiter' and no accessible extension method 'GetAwaiter' accepting a first argument of type 'IQueryable<Person>' could be found (are you missing a using directive or an assembly reference?) [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+    4 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:17.32
+~/repos/mvc-ef $ dotnet build
+Microsoft (R) Build Engine version 17.2.0+41abc5629 for .NET
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+/home/ammar/repos/mvc-ef/Models/City.cs(18,21): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Models/ErrorViewModel.cs(5,18): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(55,35): error CS1061: 'IQueryable<Person>' does not contain a definition for 'Languages' and no accessible extension method 'Languages' accepting a first argument of type 'IQueryable<Person>' could be found (are you missing a using directive or an assembly reference?) [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(74,38): error CS1061: 'IQueryable<Person>' does not contain a definition for 'PersonName' and no accessible extension method 'PersonName' accepting a first argument of type 'IQueryable<Person>' could be found (are you missing a using directive or an assembly reference?) [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(43,35): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(79,35): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(111,42): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+
+Build FAILED.
+
+/home/ammar/repos/mvc-ef/Models/City.cs(18,21): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Models/ErrorViewModel.cs(5,18): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(43,35): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(79,35): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(111,42): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(55,35): error CS1061: 'IQueryable<Person>' does not contain a definition for 'Languages' and no accessible extension method 'Languages' accepting a first argument of type 'IQueryable<Person>' could be found (are you missing a using directive or an assembly reference?) [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(74,38): error CS1061: 'IQueryable<Person>' does not contain a definition for 'PersonName' and no accessible extension method 'PersonName' accepting a first argument of type 'IQueryable<Person>' could be found (are you missing a using directive or an assembly reference?) [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+    5 Warning(s)
+    2 Error(s)
+
+Time Elapsed 00:00:23.76
+~/repos/mvc-ef $ dotnet build
+Microsoft (R) Build Engine version 17.2.0+41abc5629 for .NET
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+/home/ammar/repos/mvc-ef/Models/City.cs(18,21): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Models/ErrorViewModel.cs(5,18): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(79,35): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(111,42): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+  mvc-ef -> /home/ammar/repos/mvc-ef/bin/Debug/net6.0/mvc-ef.dll
+
+Build succeeded.
+
+/home/ammar/repos/mvc-ef/Models/City.cs(18,21): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Models/ErrorViewModel.cs(5,18): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(79,35): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(111,42): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+    4 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:18.54
+~/repos/mvc-ef $ dotnet run
+Building...
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (52ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "People" AS "p")
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: https://localhost:7223
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5193
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/ammar/repos/mvc-ef/
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."Id", "p"."CityId", "p"."PersonName", "c"."Id", "c"."CityName", "c"."CountryId", "c0"."Id", "c0"."CountryName"
+      FROM "People" AS "p"
+      INNER JOIN "Cities" AS "c" ON "p"."CityId" = "c"."Id"
+      INNER JOIN "Countries" AS "c0" ON "c"."CountryId" = "c0"."Id"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (11ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+killed
+~/repos/mvc-ef $ dotnet run
+Building...
+/home/ammar/repos/mvc-ef/Models/City.cs(18,21): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Models/ErrorViewModel.cs(5,18): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(79,35): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(111,42): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (35ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "People" AS "p")
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: https://localhost:7223
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5193
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/ammar/repos/mvc-ef/
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."Id", "p"."CityId", "p"."PersonName", "c"."Id", "c"."CityName", "c"."CountryId", "c0"."Id", "c0"."CountryName"
+      FROM "People" AS "p"
+      INNER JOIN "Cities" AS "c" ON "p"."CityId" = "c"."Id"
+      INNER JOIN "Countries" AS "c0" ON "c"."CountryId" = "c0"."Id"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (9ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+killed
+~/repos/mvc-ef $ dotnet run
+Building...
+/home/ammar/repos/mvc-ef/Models/City.cs(18,21): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Models/ErrorViewModel.cs(5,18): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(79,35): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(111,42): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (46ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "People" AS "p")
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: https://localhost:7223
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5193
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/ammar/repos/mvc-ef/
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."Id", "p"."CityId", "p"."PersonName", "c"."Id", "c"."CityName", "c"."CountryId", "c0"."Id", "c0"."CountryName"
+      FROM "People" AS "p"
+      INNER JOIN "Cities" AS "c" ON "p"."CityId" = "c"."Id"
+      INNER JOIN "Countries" AS "c0" ON "c"."CountryId" = "c0"."Id"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (8ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+fail: Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware[1]
+      An unhandled exception has occurred while executing the request.
+      System.InvalidOperationException: The LINQ expression 'DbSet<Language>()
+          .Except(__p_0)' could not be translated. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to 'AsEnumerable', 'AsAsyncEnumerable', 'ToList', or 'ToListAsync'. See https://go.microsoft.com/fwlink/?linkid=2101038 for more information.
+         at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+         at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.Expand(Expression query)
+         at Microsoft.EntityFrameworkCore.Query.QueryTranslationPreprocessor.Process(Expression query)
+         at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+         at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+         at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+         at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass9_0`1.<Execute>b__0()
+         at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+         at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+         at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+         at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetEnumerator()
+         at AspNetCoreGeneratedDocument.Views_PersonLanguage_Add.ExecuteAsync() in /home/ammar/repos/mvc-ef/Views/PersonLanguage/Add.cshtml:line 21
+         at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+         at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+         at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+         at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+         at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+         at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+         at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+         at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+      --- End of stack trace from previous location ---
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+      --- End of stack trace from previous location ---
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+         at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+         at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+killed
+~/repos/mvc-ef $ dotnet run
+Building...
+/home/ammar/repos/mvc-ef/Models/City.cs(18,21): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Models/ErrorViewModel.cs(5,18): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(79,35): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(111,42): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (36ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "People" AS "p")
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: https://localhost:7223
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5193
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/ammar/repos/mvc-ef/
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."Id", "p"."CityId", "p"."PersonName", "c"."Id", "c"."CityName", "c"."CountryId", "c0"."Id", "c0"."CountryName"
+      FROM "People" AS "p"
+      INNER JOIN "Cities" AS "c" ON "p"."CityId" = "c"."Id"
+      INNER JOIN "Countries" AS "c0" ON "c"."CountryId" = "c0"."Id"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (10ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+fail: Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware[1]
+      An unhandled exception has occurred while executing the request.
+      System.InvalidOperationException: The LINQ expression 'DbSet<Language>()
+          .Except(__p_0)' could not be translated. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to 'AsEnumerable', 'AsAsyncEnumerable', 'ToList', or 'ToListAsync'. See https://go.microsoft.com/fwlink/?linkid=2101038 for more information.
+         at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+         at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.Expand(Expression query)
+         at Microsoft.EntityFrameworkCore.Query.QueryTranslationPreprocessor.Process(Expression query)
+         at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+         at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+         at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+         at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass9_0`1.<Execute>b__0()
+         at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+         at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+         at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+         at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetEnumerator()
+         at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+         at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+         at mvc_ef.Controllers.PersonLanguageController.Add(Nullable`1 id) in /home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs:line 64
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+      --- End of stack trace from previous location ---
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+      --- End of stack trace from previous location ---
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+         at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+         at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+killed
+~/repos/mvc-ef $ dotnet run
+Building...
+/home/ammar/repos/mvc-ef/Models/City.cs(18,21): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Models/ErrorViewModel.cs(5,18): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(79,35): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(111,42): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (35ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "People" AS "p")
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: https://localhost:7223
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5193
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/ammar/repos/mvc-ef/
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."Id", "p"."CityId", "p"."PersonName", "c"."Id", "c"."CityName", "c"."CountryId", "c0"."Id", "c0"."CountryName"
+      FROM "People" AS "p"
+      INNER JOIN "Cities" AS "c" ON "p"."CityId" = "c"."Id"
+      INNER JOIN "Countries" AS "c0" ON "c"."CountryId" = "c0"."Id"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (11ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "l"."Id", "l"."LanguageName"
+      FROM "Languages" AS "l"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."Id", "p"."CityId", "p"."PersonName", "c"."Id", "c"."CityName", "c"."CountryId", "c0"."Id", "c0"."CountryName"
+      FROM "People" AS "p"
+      INNER JOIN "Cities" AS "c" ON "p"."CityId" = "c"."Id"
+      INNER JOIN "Countries" AS "c0" ON "c"."CountryId" = "c0"."Id"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "l"."Id", "l"."LanguageName"
+      FROM "Languages" AS "l"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."Id", "p"."CityId", "p"."PersonName", "c"."Id", "c"."CityName", "c"."CountryId", "c0"."Id", "c0"."CountryName"
+      FROM "People" AS "p"
+      INNER JOIN "Cities" AS "c" ON "p"."CityId" = "c"."Id"
+      INNER JOIN "Countries" AS "c0" ON "c"."CountryId" = "c0"."Id"
+killed
 ~/repos/mvc-ef $ 

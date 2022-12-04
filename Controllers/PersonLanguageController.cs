@@ -49,21 +49,14 @@ namespace mvc_ef.Controllers
 
 	    var person = await _context.People
                 .Include(p => p.Languages)
-                .FirstOrDefaultAsync(m => m.Id == id);
-	    
-	    // var languages =    
-	    // 	from c in _context.Languages    
-	    // 	where !(person.select Languages.Id)
-	    // 	.Contains(c.Id)    
-	    // 	select c;
+		.FirstOrDefaultAsync(m => m.Id == id);
+		
+	    var personLanguages = person.Languages;
+		
+	    var languages =  _context.Languages.ToList().Except(personLanguages);
 
 
-	    var languages =  _context.Languages;
-	    // var person = await _context.Languages
-            //     .Include(p => p.People).Where(
-	    // 	    .FirstOrDefaultAsync(m => m.PersonId == id));	
-
-            if (languages == null)
+            if (personLanguages == null)
             {
                 return NotFound();
             }
