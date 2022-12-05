@@ -18453,3 +18453,153 @@ info: Microsoft.EntityFrameworkCore.Database.Command[20101]
       INNER JOIN "Countries" AS "c0" ON "c"."CountryId" = "c0"."Id"
 killed
 ~/repos/mvc-ef $ exit
+Welcome to the Emacs shell
+
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet run
+Building...
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\City.cs(18,21): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\ErrorViewModel.cs(5,18): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\PersonLanguageController.cs(69,35): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\PersonLanguageController.cs(101,42): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+Unhandled exception: System.ComponentModel.Win32Exception (2): An error occurred trying to start process 'c:\Users\Lexicon\Desktop\Repos\mvc-ef\bin\Debug\net6.0\mvc-ef.exe' with working directory 'c:\Users\Lexicon\Desktop\Repos\mvc-ef'. The system cannot find the file specified.
+   at System.Diagnostics.Process.StartWithCreateProcess(ProcessStartInfo startInfo)
+   at System.Diagnostics.Process.Start()
+   at Microsoft.DotNet.Cli.Utils.Command.Execute(Action`1 processStarted)
+   at Microsoft.DotNet.Cli.Utils.Command.Execute()
+   at Microsoft.DotNet.Tools.Run.RunCommand.Execute()
+   at Microsoft.DotNet.Tools.Run.RunCommand.Run(ParseResult parseResult)
+   at Microsoft.DotNet.Cli.ParseResultCommandHandler.Invoke(InvocationContext context)
+   at System.CommandLine.Invocation.InvocationPipeline.<>c__DisplayClass4_0.<<BuildInvocationChain>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at System.CommandLine.CommandLineBuilderExtensions.<>c__DisplayClass12_0.<<UseHelp>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at System.CommandLine.CommandLineBuilderExtensions.<>c.<<UseSuggestDirective>b__18_0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at System.CommandLine.CommandLineBuilderExtensions.<>c__DisplayClass16_0.<<UseParseDirective>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at System.CommandLine.CommandLineBuilderExtensions.<>c__DisplayClass8_0.<<UseExceptionHandler>b__0>d.MoveNext()
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ dotnet run
+Building...
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\City.cs(18,21): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Models\ErrorViewModel.cs(5,18): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\PersonLanguageController.cs(69,35): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+c:\Users\Lexicon\Desktop\Repos\mvc-ef\Controllers\PersonLanguageController.cs(101,42): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [c:\Users\Lexicon\Desktop\Repos\mvc-ef\mvc-ef.csproj]
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "People" AS "p")
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: https://localhost:7223
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5193
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: c:\Users\Lexicon\Desktop\Repos\mvc-ef\
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."Id", "p"."CityId", "p"."PersonName", "c"."Id", "c"."CityName", "c"."CountryId", "c0"."Id", "c0"."CountryName"
+      FROM "People" AS "p"
+      INNER JOIN "Cities" AS "c" ON "p"."CityId" = "c"."Id"
+      INNER JOIN "Countries" AS "c0" ON "c"."CountryId" = "c0"."Id"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "l"."Id", "l"."LanguageName"
+      FROM "Languages" AS "l"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "l"."Id", "l"."LanguageName"
+      FROM "Languages" AS "l"
+      WHERE "l"."Id" = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+      FROM "People" AS "p"
+      WHERE "p"."Id" = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "l"."Id", "l"."LanguageName"
+      FROM "Languages" AS "l"
+      WHERE "l"."Id" = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+interrupt
+c:/Users/Lexicon/Desktop/Repos/mvc-ef $ 

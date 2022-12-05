@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/home/ammar/repos/mvc-ef/mvc-ef.csproj": {}
+    "c:\\Users\\Lexicon\\Desktop\\Repos\\mvc-ef\\mvc-ef.csproj": {}
   },
   "projects": {
-    "/home/ammar/repos/mvc-ef/mvc-ef.csproj": {
+    "c:\\Users\\Lexicon\\Desktop\\Repos\\mvc-ef\\mvc-ef.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/ammar/repos/mvc-ef/mvc-ef.csproj",
+        "projectUniqueName": "c:\\Users\\Lexicon\\Desktop\\Repos\\mvc-ef\\mvc-ef.csproj",
         "projectName": "mvc-ef",
-        "projectPath": "/home/ammar/repos/mvc-ef/mvc-ef.csproj",
-        "packagesPath": "/home/ammar/.nuget/packages/",
-        "outputPath": "/home/ammar/repos/mvc-ef/obj/",
+        "projectPath": "c:\\Users\\Lexicon\\Desktop\\Repos\\mvc-ef\\mvc-ef.csproj",
+        "packagesPath": "C:\\Users\\Lexicon\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\Lexicon\\Desktop\\Repos\\mvc-ef\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/ammar/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Lexicon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -67,7 +69,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -79,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/gnu/store/6rbp6pk416b524m8cpha2cz28lq2k6sg-dotnet-6.0.300/share/dotnet/sdk/6.0.300/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "c:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
