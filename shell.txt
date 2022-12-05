@@ -17765,4 +17765,691 @@ info: Microsoft.EntityFrameworkCore.Database.Command[20101]
       INNER JOIN "Cities" AS "c" ON "p"."CityId" = "c"."Id"
       INNER JOIN "Countries" AS "c0" ON "c"."CountryId" = "c0"."Id"
 killed
-~/repos/mvc-ef $ 
+~/repos/mvc-ef $ Welcome to the Emacs shell
+
+~/repos/mvc-ef $ dotnet run
+Building...
+/home/ammar/repos/mvc-ef/Models/City.cs(18,21): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Models/ErrorViewModel.cs(5,18): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(69,35): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(101,42): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (57ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "People" AS "p")
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: https://localhost:7223
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5193
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/ammar/repos/mvc-ef/
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."Id", "p"."CityId", "p"."PersonName", "c"."Id", "c"."CityName", "c"."CountryId", "c0"."Id", "c0"."CountryName"
+      FROM "People" AS "p"
+      INNER JOIN "Cities" AS "c" ON "p"."CityId" = "c"."Id"
+      INNER JOIN "Countries" AS "c0" ON "c"."CountryId" = "c0"."Id"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (9ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "l"."Id", "l"."LanguageName"
+      FROM "Languages" AS "l"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "l"."Id", "l"."LanguageName"
+      FROM "Languages" AS "l"
+      WHERE "l"."Id" = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+      FROM "People" AS "p"
+      WHERE "p"."Id" = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "l"."Id", "l"."LanguageName"
+      FROM "Languages" AS "l"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "l"."Id", "l"."LanguageName"
+      FROM "Languages" AS "l"
+      WHERE "l"."Id" = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+      FROM "People" AS "p"
+      WHERE "p"."Id" = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "l"."Id", "l"."LanguageName"
+      FROM "Languages" AS "l"
+      WHERE "l"."Id" = @__p_0
+      LIMIT 1
+fail: Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware[1]
+      An unhandled exception has occurred while executing the request.
+      System.ArgumentNullException: Value cannot be null. (Parameter 'key')
+         at System.Collections.Generic.Dictionary`2.FindValue(TKey key)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityReferenceMap.TryGet(Object entity, IEntityType entityType, InternalEntityEntry& entry, Boolean throwOnNonUniqueness)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.TryGetEntry(Object entity, IEntityType entityType, Boolean throwOnTypeMismatch)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.GetOrCreateEntry(Object entity, IEntityType entityType)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.NavigationFixer.NavigationCollectionChanged(InternalEntityEntry entry, INavigationBase navigationBase, IEnumerable`1 added, IEnumerable`1 removed)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntryNotifier.NavigationCollectionChanged(InternalEntityEntry entry, INavigationBase navigationBase, IEnumerable`1 added, IEnumerable`1 removed)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.ChangeDetector.DetectNavigationChange(InternalEntityEntry entry, INavigationBase navigationBase)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.ChangeDetector.LocalDetectChanges(InternalEntityEntry entry)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.ChangeDetector.DetectChanges(IStateManager stateManager)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.ChangeTracker.DetectChanges()
+         at Microsoft.EntityFrameworkCore.DbContext.TryDetectChanges()
+         at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+         at mvc_ef.Controllers.PersonLanguageController.AddLanguageConfirmed(Int32 id, Int32 languageId) in /home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs:line 95
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+      --- End of stack trace from previous location ---
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+      --- End of stack trace from previous location ---
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+         at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+         at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "l"."Id", "l"."LanguageName"
+      FROM "Languages" AS "l"
+      WHERE "l"."Id" = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+      FROM "People" AS "p"
+      WHERE "p"."Id" = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."Id", "p"."CityId", "p"."PersonName", "c"."Id", "c"."CityName", "c"."CountryId", "c0"."Id", "c0"."CountryName"
+      FROM "People" AS "p"
+      INNER JOIN "Cities" AS "c" ON "p"."CityId" = "c"."Id"
+      INNER JOIN "Countries" AS "c0" ON "c"."CountryId" = "c0"."Id"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "l"."Id", "l"."LanguageName"
+      FROM "Languages" AS "l"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "l"."Id", "l"."LanguageName"
+      FROM "Languages" AS "l"
+      WHERE "l"."Id" = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+      FROM "People" AS "p"
+      WHERE "p"."Id" = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "l"."Id", "l"."LanguageName"
+      FROM "Languages" AS "l"
+      WHERE "l"."Id" = @__p_0
+      LIMIT 1
+fail: Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware[1]
+      An unhandled exception has occurred while executing the request.
+      System.ArgumentNullException: Value cannot be null. (Parameter 'key')
+         at System.Collections.Generic.Dictionary`2.FindValue(TKey key)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityReferenceMap.TryGet(Object entity, IEntityType entityType, InternalEntityEntry& entry, Boolean throwOnNonUniqueness)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.TryGetEntry(Object entity, IEntityType entityType, Boolean throwOnTypeMismatch)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.GetOrCreateEntry(Object entity, IEntityType entityType)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.NavigationFixer.NavigationCollectionChanged(InternalEntityEntry entry, INavigationBase navigationBase, IEnumerable`1 added, IEnumerable`1 removed)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntryNotifier.NavigationCollectionChanged(InternalEntityEntry entry, INavigationBase navigationBase, IEnumerable`1 added, IEnumerable`1 removed)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.ChangeDetector.DetectNavigationChange(InternalEntityEntry entry, INavigationBase navigationBase)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.ChangeDetector.LocalDetectChanges(InternalEntityEntry entry)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.ChangeDetector.DetectChanges(IStateManager stateManager)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.ChangeTracker.DetectChanges()
+         at Microsoft.EntityFrameworkCore.DbContext.TryDetectChanges()
+         at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+         at mvc_ef.Controllers.PersonLanguageController.AddLanguageConfirmed(Int32 id, Int32 languageId) in /home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs:line 95
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+      --- End of stack trace from previous location ---
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+      --- End of stack trace from previous location ---
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+         at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+         at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+killed
+~/repos/mvc-ef $ dotnet run
+Building...
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (38ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "People" AS "p")
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: https://localhost:7223
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5193
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/ammar/repos/mvc-ef/
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "l"."Id", "l"."LanguageName"
+      FROM "Languages" AS "l"
+      WHERE "l"."Id" = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+      FROM "People" AS "p"
+      WHERE "p"."Id" = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."Id", "p"."CityId", "p"."PersonName", "c"."Id", "c"."CityName", "c"."CountryId", "c0"."Id", "c0"."CountryName"
+      FROM "People" AS "p"
+      INNER JOIN "Cities" AS "c" ON "p"."CityId" = "c"."Id"
+      INNER JOIN "Countries" AS "c0" ON "c"."CountryId" = "c0"."Id"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__languageId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "l"."Id", "l"."LanguageName"
+      FROM "Languages" AS "l"
+      WHERE "l"."Id" = @__languageId_0
+      LIMIT 2
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+      FROM "People" AS "p"
+      WHERE "p"."Id" = @__id_0
+      LIMIT 2
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "l"."Id", "l"."LanguageName"
+      FROM "Languages" AS "l"
+      WHERE "l"."Id" = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__languageId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "l"."Id", "l"."LanguageName"
+      FROM "Languages" AS "l"
+      WHERE "l"."Id" = @__languageId_0
+      LIMIT 2
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+      FROM "People" AS "p"
+      WHERE "p"."Id" = @__id_0
+      LIMIT 2
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."Id", "p"."CityId", "p"."PersonName", "c"."Id", "c"."CityName", "c"."CountryId", "c0"."Id", "c0"."CountryName"
+      FROM "People" AS "p"
+      INNER JOIN "Cities" AS "c" ON "p"."CityId" = "c"."Id"
+      INNER JOIN "Countries" AS "c0" ON "c"."CountryId" = "c0"."Id"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "c"."Id", "c"."CityName", "c"."CountryId", "c0"."Id", "c0"."CountryName"
+      FROM "Cities" AS "c"
+      INNER JOIN "Countries" AS "c0" ON "c"."CountryId" = "c0"."Id"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."Id", "p"."CityId", "p"."PersonName", "c"."Id", "c"."CityName", "c"."CountryId", "c0"."Id", "c0"."CountryName"
+      FROM "People" AS "p"
+      INNER JOIN "Cities" AS "c" ON "p"."CityId" = "c"."Id"
+      INNER JOIN "Countries" AS "c0" ON "c"."CountryId" = "c0"."Id"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "c"."Id", "c"."CityName", "c"."CountryId"
+      FROM "Cities" AS "c"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 7)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "People" ("CityId", "PersonName")
+      VALUES (@p0, @p1);
+      SELECT "Id"
+      FROM "People"
+      WHERE changes() = 1 AND "rowid" = last_insert_rowid();
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."Id", "p"."CityId", "p"."PersonName", "c"."Id", "c"."CityName", "c"."CountryId", "c0"."Id", "c0"."CountryName"
+      FROM "People" AS "p"
+      INNER JOIN "Cities" AS "c" ON "p"."CityId" = "c"."Id"
+      INNER JOIN "Countries" AS "c0" ON "c"."CountryId" = "c0"."Id"
+killed
+~/repos/mvc-ef $ exit
+Welcome to the Emacs shell
+
+~/repos/mvc-ef $ dotnet run
+Building...
+/home/ammar/repos/mvc-ef/Models/City.cs(18,21): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Models/ErrorViewModel.cs(5,18): warning CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(69,35): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+/home/ammar/repos/mvc-ef/Controllers/PersonLanguageController.cs(101,42): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/home/ammar/repos/mvc-ef/mvc-ef.csproj]
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (35ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "People" AS "p")
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: https://localhost:7223
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5193
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/ammar/repos/mvc-ef/
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."Id", "p"."CityId", "p"."PersonName", "c"."Id", "c"."CityName", "c"."CountryId", "c0"."Id", "c0"."CountryName"
+      FROM "People" AS "p"
+      INNER JOIN "Cities" AS "c" ON "p"."CityId" = "c"."Id"
+      INNER JOIN "Countries" AS "c0" ON "c"."CountryId" = "c0"."Id"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (9ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "l"."Id", "l"."LanguageName"
+      FROM "Languages" AS "l"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "l"."Id", "l"."LanguageName"
+      FROM "Languages" AS "l"
+      WHERE "l"."Id" = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+      FROM "People" AS "p"
+      WHERE "p"."Id" = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "l"."Id", "l"."LanguageName"
+      FROM "Languages" AS "l"
+      WHERE "l"."Id" = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "l"."Id", "l"."LanguageName"
+      FROM "Languages" AS "l"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT "t"."Id", "t"."CityId", "t"."PersonName", "t0"."LanguagesId", "t0"."PeopleId", "t0"."Id", "t0"."LanguageName"
+      FROM (
+          SELECT "p"."Id", "p"."CityId", "p"."PersonName"
+          FROM "People" AS "p"
+          WHERE "p"."Id" = @__id_0
+          LIMIT 1
+      ) AS "t"
+      LEFT JOIN (
+          SELECT "l"."LanguagesId", "l"."PeopleId", "l0"."Id", "l0"."LanguageName"
+          FROM "LanguagePerson" AS "l"
+          INNER JOIN "Languages" AS "l0" ON "l"."LanguagesId" = "l0"."Id"
+      ) AS "t0" ON "t"."Id" = "t0"."PeopleId"
+      ORDER BY "t"."Id", "t0"."LanguagesId", "t0"."PeopleId"
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'SqliteContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "p"."Id", "p"."CityId", "p"."PersonName", "c"."Id", "c"."CityName", "c"."CountryId", "c0"."Id", "c0"."CountryName"
+      FROM "People" AS "p"
+      INNER JOIN "Cities" AS "c" ON "p"."CityId" = "c"."Id"
+      INNER JOIN "Countries" AS "c0" ON "c"."CountryId" = "c0"."Id"
+killed
+~/repos/mvc-ef $ exit
