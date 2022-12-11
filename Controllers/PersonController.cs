@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -20,24 +19,25 @@ namespace mvc_ef.Controllers
         }
 
         // GET: Person
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
             var sqliteContext = _context.People.Include(p => p.City).ThenInclude(c => c.Country);
-            return View(await sqliteContext.ToListAsync());
+            return View(sqliteContext);
         }
 
         // GET: Person/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public IActionResult Details(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var person = await _context.People
+            var person =  _context.People
                 .Include(p => p.City)
 		.ThenInclude(c => c.Country)
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefault(m => m.Id == id);
+
             if (person == null)
             {
                 return NotFound();
@@ -49,52 +49,51 @@ namespace mvc_ef.Controllers
         // GET: Person/Create
         public IActionResult Create()
         {
-            ViewData["Cities"] = new SelectList(_context.Set<City>(), "Id", "CityName");
+            ViewData["Cities"] = new SelectList(_context.Cities, "Id", "CityName");
             return View();
         }
 
         // POST: Person/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,PersonName,CityId")] Person person)
+        public IActionResult Create([Bind("PersonName,CityId")] Person person)
         {
-	    
             if (ModelState.IsValid)
             {
                 _context.Add(person);
-                await _context.SaveChangesAsync();
+		_context.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["Cities"] = new SelectList(_context.Set<City>(), "Id", "CityName", person.City.CityName);
+            ViewData["Cities"] = new SelectList(_context.Cities, "Id", "CityName", person.City.CityName);
 	    return View(person);
         }
 
         // GET: Person/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public IActionResult Edit(int id)
         {
             if (id == null)
             {
                 return NotFound();
             }
-	    // var person = await _context.People.Include(p => p.City);
-            var person = await _context.People.FindAsync(id);
+	 
+            var person =  _context.People.Include(c => c.City).FirstOrDefault(p => p.Id == id);
+
             if (person == null)
             {
                 return NotFound();
             }
-	    ViewData["Cities"] = new SelectList(_context.Set<City>(), "Id", "CityName", person.City.CityName);
+
+	    ViewData["Cities"] = new SelectList(_context.Cities, "Id", "CityName", person.City.CityName);
             return View(person);
         }
 
         // POST: Person/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,PersonName,CityId")] Person person)
+        public  IActionResult Edit(int id, [Bind("Id,PersonName,CityId")] Person person)
         {
+	    if (!PersonExists(person.Id))
+	    {
+		return NotFound();
+	    }
             if (id != person.Id)
             {
                 return NotFound();
@@ -102,39 +101,26 @@ namespace mvc_ef.Controllers
 
             if (ModelState.IsValid)
             {
-                try
-                {
-                    _context.Update(person);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!PersonExists(person.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
+		_context.Update(person);
+		_context.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["Cities"] = new SelectList(_context.Set<City>(), "Id", "CityName", person.City.CityName);
+            ViewData["Cities"] = new SelectList(_context.Cities, "Id", "CityName", person.City.CityName);
             return View(person);
         }
 
         // GET: Person/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public IActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var person = await _context.People
+            var person =  _context.People
                 .Include(p => p.City)
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefault(m => m.Id == id);
+
             if (person == null)
             {
                 return NotFound();
@@ -145,15 +131,13 @@ namespace mvc_ef.Controllers
 
         // POST: Person/Delete/5
         [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public IActionResult DeleteConfirmed(int id)
         {
-            var person = await _context.People.FindAsync(id);
+            var person =  _context.People.Find(id);
             _context.People.Remove(person);
-            await _context.SaveChangesAsync();
+	    _context.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
-
 
         private bool PersonExists(int id)
         {

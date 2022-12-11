@@ -11,8 +11,8 @@ builder.Services.AddDbContext<SqliteContext>(options =>
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 // Add services to the container.
-// builder.Services.AddControllersWithViews();
-builder.Services.AddControllersWithViews(options => options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true);
+builder.Services.AddControllersWithViews();
+//builder.Services.AddControllersWithViews(options => options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true);
 
 var app = builder.Build();
 

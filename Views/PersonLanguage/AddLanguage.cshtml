@@ -6,7 +6,7 @@
 
 <h1>Add</h1>
 
-<h3>Are you sure you want to Add @Model.LanguageName</h3>
+<h3>Are you sure you want to Add @Model.LanguageName (@Model.Id)</h3>
 <div>
     <h4>to @ViewData["PersonName"] (@ViewData["PersonId"])</h4>
     <hr />
@@ -25,9 +25,8 @@
         </dd>
     </dl>
     
-    <form asp-action="AddLanguage">
-        <input type="hidden" asp-for=@Model.Id />
-        <input type="submit" value="Add" class="btn btn-primary" /> |
+    <form asp-action="AddLanguage" >
+        <input type="submit" value="Add" class="btn btn-primary" asp-route-languageId="@Model.Id" asp-route-id=@ViewData["PersonId"] /> |
         <a asp-action="Edit" asp-controller="PersonLanguage" asp-route-id=@ViewData["PersonId"]>Back to Language List</a>
     </form>
 </div>

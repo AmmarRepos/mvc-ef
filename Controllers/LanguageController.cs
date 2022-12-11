@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -19,21 +18,22 @@ namespace mvc_ef.Controllers
         }
 
         // GET: Language
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            return View(await _context.Languages.ToListAsync());
+            return View( _context.Languages);
         }
 
         // GET: Language/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public IActionResult Details(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var language = await _context.Languages
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var language =  _context.Languages
+                .FirstOrDefault(m => m.Id == id);
+
             if (language == null)
             {
                 return NotFound();
@@ -49,30 +49,28 @@ namespace mvc_ef.Controllers
         }
 
         // POST: Language/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,LanguageName")] Language language)
+	[HttpPost]
+	public IActionResult Create([Bind("LanguageName")] Language language)
         {
             if (ModelState.IsValid)
             {
                 _context.Add(language);
-                await _context.SaveChangesAsync();
+                 _context.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }
             return View(language);
         }
 
         // GET: Language/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public IActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var language = await _context.Languages.FindAsync(id);
+            var language =  _context.Languages.Find(id);
+
             if (language == null)
             {
                 return NotFound();
@@ -81,12 +79,14 @@ namespace mvc_ef.Controllers
         }
 
         // POST: Language/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,LanguageName")] Language language)
+        public  IActionResult Edit(int id, [Bind("Id,LanguageName")] Language language)
         {
+	    if (!LanguageExists(language.Id))
+	    {
+		return NotFound();
+	    }
+
             if (id != language.Id)
             {
                 return NotFound();
@@ -94,37 +94,24 @@ namespace mvc_ef.Controllers
 
             if (ModelState.IsValid)
             {
-                try
-                {
-                    _context.Update(language);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!LanguageExists(language.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
+		_context.Update(language);
+		 _context.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }
             return View(language);
         }
 
         // GET: Language/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public IActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var language = await _context.Languages
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var language =  _context.Languages
+                .FirstOrDefault(m => m.Id == id);
+
             if (language == null)
             {
                 return NotFound();
@@ -135,12 +122,11 @@ namespace mvc_ef.Controllers
 
         // POST: Language/Delete/5
         [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public IActionResult DeleteConfirmed(int id)
         {
-            var language = await _context.Languages.FindAsync(id);
+            var language =  _context.Languages.Find(id);
             _context.Languages.Remove(language);
-            await _context.SaveChangesAsync();
+	    _context.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
 
